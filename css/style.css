@@ -1,96 +1,122 @@
+﻿:root {
+    --cor-primaria: #063643;
+    --cor-secundaria: #0f637a;
+    --cor-fundo: #e2f5fa;
+    --cor-branca: #f8f8ff;
+    --cor-borda: #c7ebfb;
+    --fonte-principal: 'Poppins', sans-serif;
+}
+
+/* Configuração base do body usando medidas responsivas */
 body {
-  margin: 0;
-  padding: 0;
-  display: inline-block;
-  justify-content: center;
-  width: 1920px;
-  height: 4338px;
-  flex-shrink: 0;
-  background: #e2f5fa;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw; /* ocupa 100% da largura da janela */
+    min-height: 100vh; /* ocupa pelo menos toda a altura da janela */
+    background: var(--cor-fundo);
+    font-family: var(--fonte-principal);
 }
-.botao {
-  text-decoration: none;
-  display: flex;
-  width: 283px;
-  height: 72px;
-  padding: 10px 5px;
-  justify-content: center;
-  align-items: center;
-  gap: 10px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background: #0f637a;
-  color: #f8f8ff;
-  font-family: Poppins;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: normal;
-  margin-top: 70px;
-}
-#footer {
-  width: 1920px;
-  height: 272px;
-  flex-shrink: 0;
-  border-top: 1px solid #c7ebfb;
-  border-bottom: 1px solid #c7ebfb;
-  background: #f8f8ff;
-}
-#frame54#header {
+
+/* Cabeçalho com duas colunas: logo e navegação */
+#header {
     display: grid;
     grid-template-columns: 1fr 2fr;
-    width: 1920px;
+    width: 100%;
     height: 140px;
-    flex-shrink: 0;
     border: 1px solid rgba(85, 85, 85, 0.1);
-    background: #f8f8f8;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1);
+    background: var(--cor-branca);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
+
+/* Alinha o logo à direita da primeira coluna */
 #header1 {
     display: grid;
     justify-self: end;
     align-items: center;
 }
+
+/* Tamanho fixo do logo */
 #logo {
     width: 250px;
     height: 69.824px;
     flex-shrink: 0;
-    flex-shrink: 0;
 }
+
+/* Área de navegação centralizada com espaçamento entre itens */
 #header2 {
     display: flex;
     place-self: center;
     padding: 6px;
     gap: 36px;
 }
+
+/* Estilo dos links do menu */
 .botaoinicio {
     text-decoration: none;
-    color: #063643;
-    font-family: Poppins;
+    color: var(--cor-primaria);
     font-size: 24px;
-    font-style: normal;
     font-weight: 400;
-    line-height: normal;
 }
+
+/* Banner centralizado com largura limitada */
 .bannercentral {
     padding-left: 80px;
-    width: 1180px;
+    width: 90%;
+    max-width: 1180px;
     height: 450px;
-    flex-shrink: 0;
     border-radius: 8px;
     border: 1px solid rgba(0, 0, 0, 0.15);
-    background: #f8f8ff;
-    box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
+    background: var(--cor-branca);
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
     margin: 20px auto;
 }
+
+/* Texto principal dentro do banner */
 #texto1 {
     width: 420px;
-    color: #063643;
-    font-family: Poppins;
+    color: var(--cor-primaria);
     font-size: 28px;
-    font-style: normal;
     font-weight: 700;
-    line-height: normal;
     letter-spacing: 0.56px;
     padding-top: 48px;
+}
+
+/* Botão principal com tamanho e estilo fixos */
+.botao {
+    text-decoration: none;
+    display: flex;
+    width: 283px;
+    height: 72px;
+    padding: 10px 5px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    background: var(--cor-secundaria);
+    color: var(--cor-branca);
+    font-size: 28px;
+    font-weight: 700;
+    margin-top: 70px;
+}
+
+/* Rodapé com bordas e fundo claro */
+#footer {
+    width: 100%;
+    height: 272px;
+    border-top: 1px solid var(--cor-borda);
+    border-bottom: 1px solid var(--cor-borda);
+    background: var(--cor-branca);
+}
+
+/* Faixa superior escura (ex: barra institucional) */
+#frame54 {
+    display: flex;
+    width: 100%;
+    padding: 13px 0 9px 0;
+    justify-content: center;
+    align-items: center;
+    background: var(--cor-primaria);
 }
