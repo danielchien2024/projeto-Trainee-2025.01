@@ -11,34 +11,113 @@
     <!-- Fonte Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
     <!-- Estilos -->
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/bannercentral.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 </head>
 
 <body>
+
     <header id="header">
         <div id="header1">
             <img id="logo" src="img/logo/Logo-horizontal.png" alt="Logo da Pindorama Pets">
         </div>
         <nav id="header2">
-            <a class="botaoinicio" href="/">Início</a>
-            <a class="botaoinicio" href="/">Serviços</a>
-            <a class="botaoinicio" href="/">Sobre nós</a>
-            <a class="botaoinicio" href="/">Contato</a>
+            <a class="botaoheader" href="/">Início</a>
+            <a class="botaoheader" href="/">Serviços</a>
+            <a class="botaoheader" href="/">Sobre nós</a>
+            <a class="botaoheader" href="/">Contato</a>
         </nav>
     </header>
 
     <main class="container">
         <section class="bannercentral">
             <p id="texto1">Cuidando do Seu Pet com Profissionalismo e Carinho</p>
-            <a href="/" class="botao">Entre em contato</a>
+            <a href="/" class="botao btn-banner-central">Entre em contato</a>
+            <img id="animais1" src="/img/banner1/animais1.png" alt="Cães e gatos">
+            <img id="animais2" src="/img/banner1/animais2.png" alt="Mais cães e gatos">
+            <img id="gatocinza" src="/img/banner1/gato.png" alt="Gato">
+            <img id="waveform" src="/img/banner1/Waveform.png" alt="Forma">
         </section>
     </main>
+
+    <div id="carrossel-container"> <!-- Define um container para o carrossel -->
+
+        <!-- Crio as Setas de navegação dentro do container -->
+
+        <button class="seta volta">
+            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="40" viewBox="0 0 43 40" fill="none">
+                <path d="M28.6063 36.6666L10.7275 19.9999L28.6063 3.33325L31.7798 6.29159L17.0745 19.9999L31.7798 33.7083L28.6063 36.6666Z" fill="#063643" />
+            </svg>
+        </button>
+
+        <button class="seta frente">
+            <svg xmlns="http://www.w3.org/2000/svg" width="43" height="40" viewBox="0 0 43 40" fill="none">
+                <path d="M14.3937 3.33325L32.2725 19.9999L14.3937 36.6666L11.2202 33.7083L25.9255 19.9999L11.2202 6.29159L14.3937 3.33325Z" fill="#063643" />
+            </svg>
+        </button>
+
+        <!-- Fim das setas de navegação -->
+
+        <!-- Início do carrossel -->
+
+        <div id="carrossel"> <!-- Configuração geral do slider -->
+
+            <!-- Área dos slides -->
+
+            <div id="slides-container"> <!-- area dos slides  -->
+
+                <div class="slides">
+
+                    <div class="slide slide1">
+                        <!-- colocar uma div -->
+                        <p id="tituloslide1">Campanha de vacinação</p>
+                        <p id="textoslide1">Nos dias 19 a 28 de novembro</p>
+                        <a class="botao btn-slide1" href="/">Saiba mais</a>
+                        <img src="/img/carrossel/ciringa.png" id="ciringa" alt="ciringa">
+                        <img src="/img/carrossel/pata1.png" id="pata1" alt="pata 1">
+                        <img src="/img/carrossel/pata2.png" id="pata2" alt="pata 2">
+                        <img src="/img/carrossel/gato.png" id="gato1" alt="gato1">
+
+                    </div>
+
+                    <div class="slide slide2">
+
+                        <p id="tituloslide2">Campanha de adoção</p>
+
+                        <p id="textoslide2">Dê um lar cheio de amor a quem só quer te fazer feliz! Adote um amigo de quatro patas e transforme sua vida e a dele.</p>
+
+                        <a class="botao btn-slide2" href="/">Saiba mais</a>
+
+                        <img id="cachorrofeliz" src="/img/carrossel/cachorro.png" alt="Cachorro Sorridente">
+
+                        <img id="gato_lado" src="/img/carrossel/gato_lado.png" alt="Gato">
+
+                    </div>
+
+                    <div class="slide slide3">
+
+                        <p id="tituloslide3">Banho e tosa: cuidado e saúde para seu pet</p>
+                        <p id="textoslide3">Nossa clínica dispõe do serviço de higiene para seu Pet permanecer limpo, cheiroso e longe de parasitas.</p>
+                        <a class="botao btn-slide3" href="/">Saiba mais</a>
+                        <img id="gato_banho" src="/img/carrossel/gato_banho.png" alt="Gato de toalha">
+                        <img id="guarda_chuva" src="/img/carrossel/guarda_chuva.png" alt="Guarda Chuva">
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Botões de navegação -->
+        <div class="manual-navigation">
+            <span class="manual-btn active"></span>
+            <span class="manual-btn"></span>
+            <span class="manual-btn"></span>
+        </div>
+    </div>
 
     <footer id="footer">
         <p style="text-align: center; padding-top: 100px; font-family: Poppins;">© 2025 Pindorama Pets - Todos os direitos reservados.</p>
@@ -47,6 +126,7 @@
     <div id="frame54">
         PINDORAMA CLÍNICA VETERINÁRIA - TODOS OS DIREITOS RESERVADOS
     </div>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>
