@@ -870,13 +870,13 @@ body {
   display: flex;
   justify-self: center;
   margin-top: 2.31rem;
-  border: 2px solid black;
   width: 63.75rem;
+  height: 46rem;
+  border: 2px solid black;
 }
 #titulo-contato {
   display: flex;
-  position: absolute;
-  left: 28.12rem;
+  position: relative;
   color: #063643;
   font-family: Inter;
   font-size: 1.5rem;
@@ -888,9 +888,7 @@ body {
 #formulario {
   display: flex;
   position: relative;
-  justify-self: center;
   display: flex;
-  width: 63.75rem;
   height: 43.25rem;
   justify-content: center;
   align-items: flex-start;

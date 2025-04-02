@@ -1,2 +1,2 @@
-# projeto-Trainee-2025.01
-Pindorama Pets
+# Projeto-Trainee
+ Projeto Trainee da Unect Jr 
