@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const btnPrev = document.querySelector(".volta");
   const btnNext = document.querySelector(".frente");
   const manualBtns = document.querySelectorAll(".manual-btn");
+  const slidesContainer = document.querySelector(".slides");
 
   function updateSlide(index) {
     if (index < 0) {
@@ -15,11 +16,9 @@ document.addEventListener("DOMContentLoaded", function () {
       currentSlide = index;
     }
 
-    // Aplicar efeito de fade
-    slides.forEach((slide, i) => {
-      slide.style.opacity = i === currentSlide ? "1" : "0";
-      slide.style.transition = "opacity 0.5s ease-in-out";
-    });
+    // Movimentação do carrossel
+    slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
+    slidesContainer.style.transition = "transform 0.5s ease-in-out";
 
     // Atualizar botão ativo
     manualBtns.forEach((btn, i) => {
@@ -35,13 +34,42 @@ document.addEventListener("DOMContentLoaded", function () {
   manualBtns.forEach((btn, index) => {
     btn.addEventListener("click", () => updateSlide(index));
   });
+});
 
-  // Inicializar slides
-  slides.forEach((slide, i) => {
-    slide.style.position = "absolute";
-    slide.style.top = "0";
-    slide.style.left = "0";
-    slide.style.width = "100%";
-    slide.style.opacity = i === 0 ? "1" : "0";
-  });
+// SLIDER DOS COMENTARIOS
+const container = document.querySelector(".carousel-container-avaliacao");
+const slides = document.querySelectorAll(".slide-avaliacao");
+const prevButton = document.getElementById("prev");
+const nextButton = document.getElementById("next");
+let index = 0;
+
+function updateCarousel() {
+  const offset = -index * 100;
+
+  container.style.transition = "none";
+
+  container.style.transform = `translateX(${offset}%)`;
+
+  // Esconder ou mostrar os botões conforme o slide
+  prevButton.style.display = index === 0 ? "none" : "block";
+  nextButton.style.display = index === slides.length - 1 ? "none" : "block";
+}
+
+// Inicializa a visibilidade dos botões
+updateCarousel();
+
+// Botão "Próximo"
+nextButton.addEventListener("click", () => {
+  if (index < slides.length - 1) {
+    index++;
+    updateCarousel();
+  }
+});
+
+// Botão "Anterior"
+prevButton.addEventListener("click", () => {
+  if (index > 0) {
+    index--;
+    updateCarousel();
+  }
 });

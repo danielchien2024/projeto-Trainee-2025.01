@@ -17,12 +17,12 @@ body {
 #header {
   position: fixed;
   top: 0;
-  width: 100%;
-  display: flex; /* Alterado de grid para flex */
-  justify-content: space-between; /* Espaçamento igual entre logo e menu */
-  align-items: center;
-  height: 140px;
-  padding: 0 200px; /* Ajuste do espaçamento das laterais */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120rem;
+  height: 8.75rem;
+  flex-shrink: 0;
+  display: flex;
   border: 1px solid rgba(85, 85, 85, 0.1);
   background: #f8f8ff;
   box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
@@ -30,150 +30,138 @@ body {
 }
 /* Container de conteúdo principal (evita que fique atrás do header) */
 .container {
-  padding-top: 160px;
+  padding-top: 10rem;
   flex: 1;
 }
 
 /* Área do logo */
-#header1 {
-  display: flex;
-  align-items: center;
-}
 
 #logo {
-  width: 250px;
-  height: auto;
+  position: absolute;
+  top: 2.19rem;
+  left: 24.38rem;
+  width: 15.625rem;
+  height: 4.364rem;
+  flex-shrink: 0;
 }
-
-/* Menu de navegação */
-#header2 {
+#botoes-header {
+  position: absolute;
   display: flex;
-  align-items: center;
-  gap: 36px;
+  justify-content: space-between;
+  left: 59.38rem;
+  right: 31.69rem;
+  top: 3.44rem;
 }
 
 .botaoheader {
-  font-family: "Poppins";
-  display: flex;
   text-decoration: none;
   color: #063643;
+  font-family: Poppins;
   font-size: 1.5rem;
+  font-style: normal;
   font-weight: 400;
-  gap: 27px;
+  line-height: normal;
 }
 
 /* Banner central de destaque */
 .bannercentral {
   position: relative;
-  padding-left: 80px;
-  width: 90%;
-  max-width: 1180px;
-  height: 450px;
-  border-radius: 8px;
+  display: flexs;
+  justify-self: center;
+  width: 73.75rem;
+  height: 28.125rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
   border: 1px solid rgba(0, 0, 0, 0.15);
   background: #f8f8ff;
-  box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.15);
-  margin: 20px auto;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
 /* Botão do banner */
 .botao {
   text-decoration: none;
   display: flex;
-  width: 283px;
-  height: 72px;
-  padding: 10px 5px;
+  width: 17.6875rem;
+  height: 4.5rem;
+  padding: 0.625rem 0.3125rem;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 0.625rem;
   flex-shrink: 0;
 }
 .btn-banner-central {
-  border-radius: 8px;
+  position: absolute;
+  left: 5rem;
+  bottom: 11rem;
+  border-radius: 0.5rem;
   background: #0f637a;
   color: #f8f8ff;
   font-family: Poppins;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  margin-top: 70px;
 }
 
 #texto1 {
-  width: 420px;
+  position: absolute;
+  left: 5rem;
+  top: 3rem;
+  width: 26.25rem;
   color: #063643;
-  font-size: 28px;
+  font-family: Poppins;
+  font-size: 1.75rem;
+  font-style: normal;
   font-weight: 700;
-  padding-top: 48px;
+  line-height: normal;
+  letter-spacing: 0.035rem;
 }
 #animais1 {
   position: absolute;
-  left: 567px;
-  top: 151px;
-  width: 400px;
-  height: 255.544px;
+  left: 35.44rem;
+  top: 9.44rem;
+  width: 25rem;
+  height: 15.9715rem;
   flex-shrink: 0;
 }
 #animais2 {
   position: absolute;
-  left: 383px;
-  top: 251px;
-  width: 200px;
-  height: 160px;
+  left: 23.94rem;
+  top: 15.69rem;
+  width: 12.5rem;
+  height: 10rem;
   flex-shrink: 0;
 }
 #gatocinza {
   position: absolute;
-  left: 880px;
-  top: 235px;
-  width: 220px;
-  height: 171.893px;
+  left: 55rem;
+  top: 14.69rem;
+  width: 13.75rem;
+  height: 10.74331rem;
   flex-shrink: 0;
 }
 #waveform {
   position: absolute;
-  left: 897px;
+  left: 56.06rem;
   top: 0;
   width: 200px;
   height: 200px;
   flex-shrink: 0;
 }
-/* Rodapé principal */
-#footer {
-  width: 100%;
-  height: 272px;
-  border-top: 1px solid #c7ebfb;
-  border-bottom: 1px solid #c7ebfb;
-  background: #f8f8ff;
-}
 
-/* Rodapé inferior */
-#frame54 {
-  width: 100%;
-  padding: 13px 0 9px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #063643;
-  color: #ffffff;
-  font-size: 12px;
-  font-weight: 700;
-  text-transform: uppercase;
-  line-height: 1;
-  letter-spacing: 0;
-}
 /* Interatividade do SLIDER */
 #carrossel-container {
-  display: grid;
-  margin: 0 auto;
-  justify-content: center;
+  margin-top: 1.25rem;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
   position: relative;
-  width: 1180px;
-  height: 332px;
+  width: 73.75rem;
+  height: 20.75rem;
+  overflow: hidden;
   flex-shrink: 0;
-  border: 2px solid black;
 }
 /* Setas de navegação */
+
 .seta {
   position: absolute;
   top: 50%;
@@ -181,129 +169,100 @@ body {
   background: none;
   border: none;
   cursor: pointer;
-  padding: 0px;
-  transition: transform 0.3s ease-in-out;
 }
-
-.seta:hover {
-  transform: translateY(-50%) scale(1.1);
-}
-
-/* Ajuste de posição */
 .volta {
-  left: 0px;
+  left: 0;
 }
 .frente {
-  right: 0px;
+  right: 0;
 }
-
-/* Ajusta o tamanho do SVG dentro do botão */
 .seta svg {
-  width: 42.909px;
-  height: 40px;
+  width: 2.68181rem;
+  height: 2.5rem;
   flex-shrink: 0;
 }
-/* Configuração geral do slider */
-#carrossel {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  width: 1094.182px;
-  height: 300px;
-  flex-shrink: 0;
-  border-radius: 8px;
-  background: #6bb7cb;
-  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
-  overflow: hidden;
-}
-
 /* Área dos slides */
 #slides-container {
-  width: 100%;
-  height: 100%;
   display: flex;
+  margin: 0 auto;
+  width: 68.38638rem;
+  height: 18.75rem;
+  flex-shrink: 0;
   overflow: hidden;
+  position: relative;
 }
-
 .slides {
   display: flex;
-  position: relative;
-  width: 300%;
+  width: 300%; /* Cada slide ocupa 100% dentro disso */
   transition: transform 0.5s ease-in-out;
 }
 .slide {
+  width: 100%;
+  flex-shrink: 0;
   display: flex;
   flex-direction: column;
-  position: relative;
-  width: 1094.182px;
-  height: 300px;
-  flex-shrink: 0;
-  overflow: hidden;
-  font-family: Poppins;
 }
+
 /*FORMATAÇÃO DO SLIDE 1 DO CARROSSEL*/
 .slide1 {
-  background-color: #6bb7cb;
+  position: relative;
+  flex-shrink: 0;
+  background: #6bb7cb;
 }
 #tituloslide1 {
   position: absolute;
+  top: 1.5rem;
+  right: 13.39rem;
   color: #063643;
   font-family: Poppins;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 0.56px;
-  right: 0;
-  top: 0;
-  margin-top: 24px;
-  margin-right: 214.18px;
+  letter-spacing: 0.035rem;
 }
 #textoslide1 {
   position: absolute;
-  left: 0px;
-  margin-left: 510px;
-  top: 78px;
+  left: 31.87rem;
+  top: 4.88rem;
   color: #0f637a;
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.025rem;
 }
 #ciringa {
   position: absolute;
-  left: 0;
-  top: 0;
-  margin-left: 112px;
-  margin-top: 93px;
-  width: 150px;
-  height: 150px;
+  left: 7rem;
+  top: 5.81rem;
+  width: 9.375rem;
+  height: 9.375rem;
   flex-shrink: 0;
 }
 #pata1 {
-  width: 100px;
-  height: 96.289px;
   position: absolute;
-  top: 12px;
-  left: 21px;
+  top: 0.75rem;
+  left: 1.31rem;
+  width: 6.25rem;
+  height: 6.01806rem;
   flex-shrink: 0;
 }
 #pata2 {
   position: absolute;
-  left: 256px;
-  top: 132px;
-  width: 100px;
-  height: 96.289px;
+  left: 16rem;
+  top: 8.25rem;
+  width: 6.25rem;
+  height: 6.01806rem;
   flex-shrink: 0;
 }
 #gato1 {
   position: absolute;
-  bottom: 4.33px;
-  left: 863px;
-  width: 120px;
-  height: 195.669px;
+  top: 6.25rem;
+  right: 6.95rem;
+  width: 7.5rem;
+  height: 12.22931rem;
   flex-shrink: 0;
 }
 .btn-slide1 {
@@ -312,142 +271,144 @@ body {
   background: #f8f8ff;
   color: #063643;
   font-family: Poppins;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  top: 159px;
-  left: 510.09px;
+  top: 9.94rem;
+  left: 31.88rem;
 }
 /* FORMATAÇÃO DO SLIDE 2 DO CARROSSEL */
 .slide2 {
+  position: relative;
   background-color: #063643;
   color: white;
   background-image: url("/img/carrossel/fundo2.png");
 }
 #tituloslide2 {
   position: absolute;
-  top: 24px;
-  left: 64px;
+  top: 1.5rem;
+  left: 4rem;
   color: #fff;
   font-family: Poppins;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 0.56px;
+  letter-spacing: 0.035rem;
 }
 #textoslide2 {
   position: absolute;
-  left: 64px;
-  top: 89px;
-  width: 519px;
+  left: 4rem;
+  top: 5.56rem;
+  width: 519p32.4375rem;
   color: #fafdff;
   font-family: Poppins;
-  font-size: 18px;
+  font-size: 1.125rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  letter-spacing: 0.36px;
+  letter-spacing: 0.0225rem;
 }
 .btn-slide2 {
   position: absolute;
-  border-radius: 4px;
+  top: 12.94rem;
+  left: 5.56rem;
+  border-radius: 0.25rem;
   background: #f8f8ff;
   color: #063643;
   font-family: Poppins;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  top: 207px;
-  left: 89px;
 }
 #cachorrofeliz {
   position: absolute;
-  top: 89px;
-  left: 644px;
-  width: 200px;
-  height: 297.952px;
+  top: 5.56rem;
+  left: 40.25rem;
+  width: 12.5rem;
+  height: 18.622rem;
   flex-shrink: 0;
 }
 #gato_lado {
   position: absolute;
-  left: 949px;
-  right: -5px;
-  width: 150px;
-  height: 314px;
+  left: 59.31rem;
+  right: -0.31rem;
+  width: 9.375rem;
+  height: 19.625rem;
   flex-shrink: 0;
 }
 /* FORMATAÇÃO DO SLIDE 3 */
 .slide3 {
+  position: relative;
   background-color: #f8f8ff;
   background-image: url("/img/carrossel/fundo3.png");
   background-repeat: no-repeat;
   background-position: right;
 }
 #tituloslide3 {
-  z-index: 1;
   position: absolute;
-  left: 64px;
-  top: 24px;
+  left: 4rem;
+  top: 1.5rem;
   color: #063643;
   font-family: Poppins;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  letter-spacing: 0.56px;
+  letter-spacing: 0.035rem;
+  z-index: 1;
 }
 #textoslide3 {
-  z-index: 1;
   position: absolute;
-  top: 78px;
-  left: 64px;
-  width: 596px;
+  top: 4.88rem;
+  left: 4rem;
+  width: 37.25rem;
   color: #063643;
   font-family: Poppins;
-  font-size: 20px;
+  font-size: 1.25rem;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
-  letter-spacing: 0.4px;
+  letter-spacing: 0.025rem;
+  z-index: 1;
 }
 .btn-slide3 {
   position: absolute;
-  top: 196px;
-  left: 93px;
-  border-radius: 8px;
+  top: 12.25rem;
+  left: 5.81rem;
+  border-radius: 0.25rem;
   background: #063643;
   color: #f8f8ff;
   font-family: Poppins;
-  font-size: 28px;
+  font-size: 1.75rem;
   font-style: normal;
   font-weight: 700;
   line-height: normal;
 }
 #guarda_chuva {
   position: absolute;
-  right: 866.87px;
-  top: -74;
-  width: 200px;
-  height: 200px;
+  right: 54.13rem;
+  bottom: 6.49rem;
+  width: 12.5rem;
+  height: 12.5rem;
   flex-shrink: 0;
   z-index: 0;
 }
 #gato_banho {
   position: absolute;
-  left: 825px;
-  width: 249px;
-  height: 300px;
+  left: 51.56rem;
+  width: 15.5625rem;
+  height: 18.75rem;
   flex-shrink: 0;
 }
 /* Botão CTA */
 .cta {
-  padding: 10px 20px;
+  padding: 0.625rem 1.25rem;
   background-color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 0.3125rem;
   font-weight: bold;
   cursor: pointer;
 }
@@ -455,15 +416,15 @@ body {
 /* Botões de navegação */
 .manual-navigation {
   display: flex;
-  gap: 24.5px; /* Espaço calculado entre os botões */
+  gap: 1.53125rem;
   justify-content: center;
   align-items: end;
-  margin-top: 12px;
+  margin-top: 0.75rem;
 }
-
 .manual-btn {
-  width: 20px;
-  height: 20px;
+  width: 1.27rem;
+  height: 1.25rem;
+  flex-shrink: 0;
   background-color: #a3a3a3;
   border-radius: 50%;
   cursor: pointer;
@@ -472,4 +433,435 @@ body {
 
 .manual-btn.active {
   background-color: #6bb7cb;
+}
+
+#quadro_azul {
+  justify-self: center;
+  margin-top: 1.875rem;
+  width: 120rem;
+}
+/* DIV "QUEM SOMOS" */
+#quem_somos {
+  display: flex;
+  position: relative;
+  width: 120rem;
+  height: 18.75rem;
+  flex-shrink: 0;
+  border-radius: 0.125rem 0.125rem 0rem 0rem;
+  background: #89c5d5;
+  background-image: url("/img/banner_descricao/fundo-animais-icons\ 2.png");
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top;
+}
+#titulo-quem-somos {
+  position: absolute;
+  left: 53.875rem;
+  top: 1.5rem;
+  color: #063643;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#texto-quem-somos {
+  position: absolute;
+  top: 5.8125rem;
+  left: 53.875rem;
+  width: 43.6875rem;
+  color: #0f637a;
+  font-family: "Open Sans";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.625rem; /* 130% */
+  letter-spacing: 0.025rem;
+}
+#imagens-quem_somos {
+  position: absolute;
+  left: 28.6875rem;
+  width: 18.75rem;
+  height: 18.75rem;
+  flex-shrink: 0;
+}
+#logo-icon {
+  position: absolute;
+  top: 3.775rem;
+  left: 5.50125rem;
+  width: 7.747rem;
+  height: 7.14256rem;
+  flex-shrink: 0;
+}
+#logo-name {
+  position: absolute;
+  left: 3.650625rem;
+  bottom: 3.465rem;
+  width: 11.5335rem;
+  height: 3.410625rem;
+  flex-shrink: 0;
+}
+#produto1 {
+  position: relative;
+  width: 120rem;
+  height: 26.13rem;
+  flex-shrink: 0;
+  background-color: #63b3c9;
+  background-image: url("/img/banner_descricao/fundo-animais-icons\ 2.png");
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top;
+}
+#titulo-produto {
+  width: 12.4375rem;
+  position: absolute;
+  top: 3.25rem;
+  left: 28.125rem;
+  color: #063643;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#texto-produto {
+  position: absolute;
+  left: 53.875rem;
+  bottom: 7.0625rem;
+  width: 38.75rem;
+  color: #063643;
+  font-family: "Open Sans";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+  letter-spacing: 0.025rem;
+}
+
+#doutora-gato {
+  position: absolute;
+  left: 28.125rem;
+  bottom: 1.5625rem;
+}
+
+#produto2 {
+  position: relative;
+  width: 120rem;
+  height: 20.3125rem;
+  flex-shrink: 0;
+  margin: 0 auto;
+  border-radius: 0.125rem 0.125rem 0rem 0rem;
+  background: #89c5d5;
+}
+
+#doutora-cachorro {
+  position: absolute;
+  top: 1.5625rem;
+  right: 28.125rem;
+  width: 20rem;
+  height: 16.25rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+}
+
+#texto-produto2 {
+  position: absolute;
+  top: 5.1875rem;
+  left: 29.125rem;
+  width: 38.75rem;
+  color: var(--Colors-blue1100, #063643);
+  font-family: "Open Sans";
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.875rem;
+  letter-spacing: 0.025rem;
+}
+#nossos-profissionais {
+  position: relative;
+  margin: 3rem auto;
+  width: 73.75rem;
+  height: 28.75rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background: #f8f8ff;
+  box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+}
+
+#titulo-nossos-profissionais {
+  position: absolute;
+  left: 5rem;
+  top: 2.75rem;
+  color: #063643;
+  font-family: Poppins;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+#medicos {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  position: absolute;
+  justify-items: center;
+  top: 7.5rem;
+  width: 73.75rem;
+  height: 21.25rem;
+}
+
+.foto-medico {
+  width: 15rem;
+  height: 15rem;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+}
+
+.nome-medico {
+  display: flex;
+  justify-content: center;
+  color: #063643;
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.especializacao-medico {
+  display: flex;
+  justify-content: center;
+  color: #063643;
+  font-family: Inter;
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+/* SLIDER DA AVALIAÇÃO */
+
+.carousel-avaliacao {
+  position: relative;
+  width: 73.75rem;
+  height: 39.125rem;
+  flex-shrink: 0;
+  margin: 0 auto;
+  overflow: hidden;
+  border-radius: 0.625rem;
+  border: 0.125rem solid black;
+}
+.carousel-container-avaliacao {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+  width: 300%;
+}
+.slide-avaliacao {
+  position: relative;
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+}
+.buttons-avaliacao {
+  width: 100%;
+}
+/* Estilo das setas */
+#seta-avancar-avaliacao {
+  display: inline-flex;
+  padding: 0.3125rem 0.625rem;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.5rem;
+  position: absolute;
+  bottom: 1.75rem;
+  right: 5.0625rem;
+  border-radius: 0.5rem;
+  border: 1px solid #063643;
+}
+#seta-volta-avaliacao {
+  position: absolute;
+  bottom: 1.75rem;
+  right: 9.5rem;
+  display: inline-flex;
+  padding: 0.3125rem 0.625rem;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 0.5rem;
+  border: 1px solid #063643;
+}
+#indice-avaliacao {
+  position: absolute;
+  left: 64.72rem;
+  top: 35.3rem;
+  color: #063643;
+  font-family: Poppins;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 1.875rem;
+  letter-spacing: 0.01125rem;
+}
+.buttons-avaliacao button {
+  cursor: pointer;
+  font-size: 1.125rem;
+  background-color: transparent;
+}
+.container-estrelas {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+.estrela {
+  width: 1.246rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+}
+.imagem-entre-avaliacoes {
+  position: absolute;
+  left: 4.0625rem;
+  width: 56.25rem;
+  height: 0.125rem;
+  flex-shrink: 0;
+}
+/* CONFIGURAÇÕES GERAIS DO SLIDER */
+.img-comentario {
+  border-radius: 2.8125rem;
+  border: 0.0625rem solid rgba(0, 0, 0, 0.15);
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.25);
+}
+#titulo-avaliacao {
+  position: absolute;
+  top: 2.875rem;
+  left: 5rem;
+  color: #063643;
+  font-family: Inter;
+  font-size: 1.5rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.nome-avaliacao {
+  color: #063643;
+  font-family: Inter;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+.texto-avaliacao {
+  color: #063643;
+  font-family: Inter;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+/* CONTEÚDO DA AVALIAÇÃO DOS SLIDES */
+#img-comentario-01 {
+  width: 5.04506rem;
+  height: 5rem;
+  flex-shrink: 0;
+  position: absolute;
+  top: 7.938rem;
+  left: 5rem;
+}
+#img-comentario-02 {
+  width: 5rem;
+  height: 5rem;
+  flex-shrink: 0;
+  position: absolute;
+  top: 16.313rem;
+  left: 5rem;
+}
+#img-comentario-03 {
+  width: 5.063rem;
+  height: 5rem;
+  flex-shrink: 0;
+  position: absolute;
+  top: 25.188rem;
+  left: 5rem;
+}
+.nome-avaliacao-01 {
+  position: absolute;
+  top: 9.125rem;
+  left: 11.78rem;
+}
+.nome-avaliacao-02 {
+  position: absolute;
+  top: 17.188rem;
+  left: 11.5rem;
+}
+.nome-avaliacao-03 {
+  position: absolute;
+  top: 26.25rem;
+  left: 11.611rem;
+}
+.texto-avaliacao-01 {
+  position: absolute;
+  top: 11.125rem;
+  left: 11.78rem;
+  width: 46.348rem;
+}
+.texto-avaliacao-02 {
+  position: absolute;
+  top: 19.313rem;
+  left: 11.591rem;
+  width: 46.348rem;
+}
+.texto-avaliacao-03 {
+  position: absolute;
+  top: 28.25rem;
+  left: 11.611rem;
+  width: 46.348rem;
+}
+.estrelas-01 {
+  position: absolute;
+  top: 7.375rem;
+  left: 11.78rem;
+}
+.estrelas-02 {
+  position: absolute;
+  top: 15.438rem;
+  left: 11.591rem;
+}
+.estrelas-03 {
+  position: absolute;
+  top: 24.563rem;
+  left: 11.669rem;
+}
+.imagem-entre-um {
+  position: absolute;
+  top: 14.563rem;
+}
+.imagem-entre-dois {
+  position: absolute;
+  top: 23.25rem;
+}
+/* Rodapé principal */
+#footer {
+  width: 120rem;
+  margin: 0 auto;
+  height: 17rem;
+  border-top: 0.0625rem solid #c7ebfb;
+  border-bottom: 0.0625rem solid #c7ebfb;
+  background: #f8f8ff;
+}
+/* Rodapé inferior */
+#frame54 {
+  width: 120rem;
+  margin: 0 auto;
+  padding: 0.8125rem 0 0.5625rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #063643;
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0;
 }
