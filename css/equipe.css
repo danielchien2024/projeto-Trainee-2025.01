@@ -1,0 +1,51 @@
+#nossos-profissionais {
+  position: relative;
+  margin: 3rem auto;
+  width: 73.75rem;
+  height: 28.75rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+  background: #f8f8ff;
+  box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+}
+
+#titulo-nossos-profissionais {
+  position: absolute;
+  left: 5rem;
+  top: 2.75rem;
+  color: #063643;
+  font-weight: 700;
+}
+
+#medicos {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  position: absolute;
+  justify-items: center;
+  top: 7.5rem;
+  width: 73.75rem;
+  height: 21.25rem;
+}
+
+.foto-medico {
+  width: 15rem;
+  height: 15rem;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+}
+
+.nome-medico {
+  display: flex;
+  justify-content: center;
+  color: #063643;
+  font-family: Inter;
+  font-weight: 500;
+}
+
+.especializacao-medico {
+  display: flex;
+  justify-content: center;
+  color: #063643;
+  font-family: Inter;
+}

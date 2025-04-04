@@ -1,0 +1,134 @@
+#quadro_azul {
+  justify-self: center;
+  margin-top: 1.875rem;
+  width: 120rem;
+}
+
+/* DIV "QUEM SOMOS" */
+#quem_somos {
+  display: flex;
+  position: relative;
+  width: 120rem;
+  height: 18.75rem;
+  flex-shrink: 0;
+  border-radius: 0.125rem 0.125rem 0rem 0rem;
+  background: #89c5d5;
+  background-image: url("/img/banner_descricao/fundo-animais-icons\ 2.png");
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top;
+}
+
+#titulo-quem-somos {
+  position: absolute;
+  left: 53.875rem;
+  top: 1.5rem;
+  color: #063643;
+  font-weight: 700;
+}
+
+#texto-quem-somos {
+  position: absolute;
+  top: 5.8125rem;
+  left: 53.875rem;
+  width: 43.6875rem;
+  color: #0f637a;
+  font-family: Open Sans;
+  line-height: 1.625rem;
+  letter-spacing: 0.025rem;
+}
+
+#imagens-quem_somos {
+  position: absolute;
+  left: 28.6875rem;
+  width: 18.75rem;
+  height: 18.75rem;
+  flex-shrink: 0;
+}
+
+#logo-icon {
+  position: absolute;
+  top: 3.775rem;
+  left: 5.50125rem;
+  width: 7.747rem;
+  height: 7.14256rem;
+  flex-shrink: 0;
+}
+
+#logo-name {
+  position: absolute;
+  left: 3.650625rem;
+  bottom: 3.465rem;
+  width: 11.5335rem;
+  height: 3.410625rem;
+  flex-shrink: 0;
+}
+#produto1 {
+  position: relative;
+  width: 120rem;
+  height: 26.13rem;
+  flex-shrink: 0;
+  background-color: #63b3c9;
+  background-image: url("/img/banner_descricao/fundo-animais-icons\ 2.png");
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: top;
+}
+
+#titulo-produto {
+  width: 12.4375rem;
+  position: absolute;
+  top: 3.25rem;
+  left: 28.125rem;
+  color: #063643;
+  font-family: Inter;
+  font-weight: 700;
+}
+
+#texto-produto {
+  position: absolute;
+  left: 53.875rem;
+  bottom: 7.0625rem;
+  width: 38.75rem;
+  color: #063643;
+  font-family: Open Sans;
+  line-height: 1.875rem;
+  letter-spacing: 0.025rem;
+}
+
+#doutora-gato {
+  position: absolute;
+  left: 28.125rem;
+  bottom: 1.5625rem;
+}
+
+#produto2 {
+  position: relative;
+  width: 120rem;
+  height: 20.3125rem;
+  flex-shrink: 0;
+  margin: 0 auto;
+  border-radius: 0.125rem 0.125rem 0rem 0rem;
+  background: #89c5d5;
+}
+
+#doutora-cachorro {
+  position: absolute;
+  top: 1.5625rem;
+  right: 28.125rem;
+  width: 20rem;
+  height: 16.25rem;
+  flex-shrink: 0;
+  border-radius: 0.5rem;
+}
+
+#texto-produto2 {
+  position: absolute;
+  top: 5.1875rem;
+  left: 29.125rem;
+  width: 38.75rem;
+  color: #063643;
+  font-family: Open Sans;
+  line-height: 1.875rem;
+  letter-spacing: 0.025rem;
+}

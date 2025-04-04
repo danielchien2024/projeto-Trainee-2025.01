@@ -1,0 +1,281 @@
+/* Interatividade do SLIDER */
+#carrossel-container {
+  margin-top: 1.25rem;
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 73.75rem;
+  height: 20.75rem;
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+/* Setas de navegação */
+
+.seta {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.volta {
+  left: 0;
+}
+
+.frente {
+  right: 0;
+}
+
+.seta svg {
+  width: 2.68181rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+}
+
+/* Área dos slides */
+#slides-container {
+  display: flex;
+  margin: 0 auto;
+  width: 68.38638rem;
+  height: 18.75rem;
+  flex-shrink: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.slides {
+  display: flex;
+  width: 300%;
+  /* Cada slide ocupa 100% dentro disso */
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+/*FORMATAÇÃO DO SLIDE 1 DO CARROSSEL*/
+.slide1 {
+  position: relative;
+  flex-shrink: 0;
+  background: #6bb7cb;
+}
+
+#tituloslide1 {
+  position: absolute;
+  top: 8%;
+  right: 15.5%;
+  color: #063643;
+}
+
+#textoslide1 {
+  position: absolute;
+  left: 31.87rem;
+  top: 4.88rem;
+  color: #0f637a;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.025rem;
+}
+
+#ciringa {
+  position: absolute;
+  left: 7rem;
+  top: 5.81rem;
+  width: 9.375rem;
+  height: 9.375rem;
+  flex-shrink: 0;
+}
+
+#pata1 {
+  position: absolute;
+  top: 0.75rem;
+  left: 1.31rem;
+  width: 6.25rem;
+  height: 6.01806rem;
+  flex-shrink: 0;
+}
+
+#pata2 {
+  position: absolute;
+  left: 16rem;
+  top: 8.25rem;
+  width: 6.25rem;
+  height: 6.01806rem;
+  flex-shrink: 0;
+}
+
+#gato1 {
+  position: absolute;
+  top: 6.25rem;
+  right: 6.95rem;
+  width: 7.5rem;
+  height: 12.22931rem;
+  flex-shrink: 0;
+}
+
+.btn-slide1 {
+  position: absolute;
+  border-radius: 4px;
+  background: #f8f8ff;
+  color: #063643;
+  top: 9.94rem;
+  left: 31.88rem;
+}
+/* FORMATAÇÃO DO SLIDE 2 DO CARROSSEL */
+.slide2 {
+  position: relative;
+  background-color: #063643;
+  color: white;
+  background-image: url("/img/carrossel/fundo2.png");
+}
+#tituloslide2 {
+  position: absolute;
+  top: 1.5rem;
+  left: 4rem;
+  color: #fff;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.035rem;
+}
+#textoslide2 {
+  position: absolute;
+  left: 4rem;
+  top: 5.56rem;
+  width: 519p32.4375rem;
+  color: #fafdff;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.0225rem;
+}
+.btn-slide2 {
+  position: absolute;
+  top: 12.94rem;
+  left: 5.56rem;
+  border-radius: 0.25rem;
+  background: #f8f8ff;
+  color: #063643;
+}
+#cachorrofeliz {
+  position: absolute;
+  top: 5.56rem;
+  left: 40.25rem;
+  width: 12.5rem;
+  height: 18.622rem;
+  flex-shrink: 0;
+}
+#gato_lado {
+  position: absolute;
+  left: 59.31rem;
+  right: -0.31rem;
+  width: 9.375rem;
+  height: 19.625rem;
+  flex-shrink: 0;
+}
+/* FORMATAÇÃO DO SLIDE 3 */
+.slide3 {
+  position: relative;
+  background-color: #f8f8ff;
+  background-image: url("/img/carrossel/fundo3.png");
+  background-repeat: no-repeat;
+  background-position: right;
+}
+#tituloslide3 {
+  position: absolute;
+  left: 4rem;
+  top: 1.5rem;
+  color: #063643;
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 0.035rem;
+  z-index: 1;
+}
+
+#textoslide3 {
+  position: absolute;
+  top: 4.88rem;
+  left: 4rem;
+  width: 37.25rem;
+  color: #063643;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: 0.025rem;
+  z-index: 1;
+}
+
+.btn-slide3 {
+  position: absolute;
+  top: 12.25rem;
+  left: 5.81rem;
+  border-radius: 0.25rem;
+  background: #063643;
+  color: #f8f8ff;
+}
+
+#guarda_chuva {
+  position: absolute;
+  right: 54.13rem;
+  bottom: 6.49rem;
+  width: 12.5rem;
+  height: 12.5rem;
+  flex-shrink: 0;
+  z-index: 0;
+}
+
+#gato_banho {
+  position: absolute;
+  left: 51.56rem;
+  width: 15.5625rem;
+  height: 18.75rem;
+  flex-shrink: 0;
+}
+
+/* Botão CTA */
+.cta {
+  padding: 0.625rem 1.25rem;
+  background-color: white;
+  border: none;
+  border-radius: 0.3125rem;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Botões de navegação */
+.manual-navigation {
+  display: flex;
+  gap: 1.53125rem;
+  justify-content: center;
+  align-items: end;
+  margin-top: 0.75rem;
+}
+
+.manual-btn {
+  width: 1.27rem;
+  height: 1.25rem;
+  flex-shrink: 0;
+  background-color: #a3a3a3;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.manual-btn.active {
+  background-color: #6bb7cb;
+}
