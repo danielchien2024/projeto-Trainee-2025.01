@@ -2,76 +2,66 @@
   position: relative;
   display: flex;
   justify-self: center;
-  justify-content: space-between;
-  width: 73.75rem;
+  width: 100%;
+  max-width: 73.75rem;
   height: 28.125rem;
-  flex: 1;
   border-radius: 0.5rem;
   margin-top: 9.5rem;
   border: 1px solid rgba(0, 0, 0, 0.15);
   background: #f8f8ff;
   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.15);
 }
-
-#container-texto {
-  flex-basis: 40%;
+#bannercentral .container {
+  width: 86.45%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
 }
 
-.botao {
-  text-decoration: none;
-  display: flex;
-  width: 17.6875rem;
-  height: 4.5rem;
-  padding: 0.625rem 0.3125rem;
-  justify-content: center;
-  align-items: center;
-  gap: 0.625rem;
-  flex-shrink: 0;
+#titulo-banner-central {
+  width: 100%;
+  max-width: 26.25rem;
+  padding-top: 3rem;
+  grid-column: 1/4;
+  color: #063643;
 }
 
 .btn-banner-central {
-  position: absolute;
-  left: 5rem;
-  bottom: 11rem;
+  grid-row: 2;
+
   border-radius: 0.5rem;
   background: #0f637a;
   color: #f8f8ff;
 }
 
-#titulo-banner-central {
-  position: absolute;
-  left: 5rem;
-  top: 3rem;
-  max-width: 26.25rem;
-  color: #063643;
+#animais {
+  position: relative;
+  grid-column: 2/4;
+  grid-row: 2;
 }
 
-#container-imagem {
-  flex-basis: 60%;
-}
-
-#animais1 {
+#animais #animais1 {
   position: absolute;
-  right: 5.44rem;
-  top: 9.44rem;
+  bottom: 2.72rem;
+  right: 8.31rem;
   width: 25rem;
   height: 15.9715rem;
   flex-shrink: 0;
 }
 
-#animais2 {
+#animais #animais2 {
   position: absolute;
-  left: 23.94rem;
-  top: 15.69rem;
+  bottom: 2.44rem;
+  right: 32.31rem;
   width: 12.5rem;
   height: 10rem;
   flex-shrink: 0;
 }
 
-#gatocinza {
+#animais #gatocinza {
   position: absolute;
-  left: 55rem;
-  top: 14.69rem;
+  bottom: 2.69rem;
+  right: 0;
   width: 13.75rem;
   height: 10.74331rem;
   flex-shrink: 0;
@@ -79,9 +69,27 @@
 
 #waveform {
   position: absolute;
-  left: 56.06rem;
   top: 0;
+  right: 0;
   width: 200px;
   height: 200px;
   flex-shrink: 0;
+}
+@media (max-width: 1150px) {
+  #animais #animais2 {
+    display: none;
+  }
+}
+@media (max-width: 950px) {
+  #animais #animais1 {
+    display: none;
+  }
+}
+@media (max-width: 600px) {
+  #bannercentral #waveform {
+    display: none;
+  }
+  #animais #gatocinza {
+    display: none;
+  }
 }

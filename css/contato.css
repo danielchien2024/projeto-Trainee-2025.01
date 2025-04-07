@@ -18,10 +18,12 @@
 }
 
 #formulario {
+  position: relative;
   display: grid;
   grid-template-columns: 2fr 3fr;
   width: 100%;
   height: auto;
+  min-height: 43.25rem;
 }
 #info {
   border-radius: 0.5rem 0rem 0rem 0.5rem;
@@ -75,10 +77,11 @@
 }
 #campos-formulario {
   display: flex;
-  width: 100%;
-  height: 43.25rem;
+  padding: 3.1875rem 2.5rem 2.875rem 2.5rem;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
   gap: 1.75rem;
-  padding: 1.4rem 2.5rem 2.875rem 2.5rem;
 
   border-radius: 0rem 0.5rem 0.5rem 0rem;
   border-top: 1px solid rgba(6, 54, 67, 0.4);
@@ -90,6 +93,8 @@
   width: 100%;
   max-width: 32.5rem;
   height: 3.75rem;
+  flex-shrink: 0;
+
   font-size: 1.2rem;
   border-radius: 0.5rem;
   border-radius: 0.5rem;
@@ -101,12 +106,14 @@
   border: 2px solid #063643;
   outline: none;
 }
-#campos-formulario p {
+#campos-formulario form p {
   font-family: Inter;
   font-weight: 700;
   color: #063643;
-  padding-top: 1.75rem;
   padding-bottom: 0.5rem;
+}
+#campos-formulario form p:not(:first-child) {
+  padding-top: 1.75rem;
 }
 #campos-formulario a {
   display: flex;
@@ -122,6 +129,7 @@
 #campos-formulario form {
   display: flex;
   flex-direction: column;
+  width: 100%;
 }
 #mensagem {
   height: 7.5rem;
@@ -138,13 +146,9 @@
 
 /* Parte Mobile */
 
-@media (max-width: 700px) {
-  .container {
-    overflow: visible;
-    width: 100%;
-  }
+@media (max-width: 800px) {
   #contato {
-    width: 100%;
+    width: 90%;
     height: auto;
     flex-shrink: 0;
     background: #fafdff;
@@ -156,9 +160,10 @@
   }
   #formulario {
     display: flex;
-    width: 100%;
+    width: 90%;
     height: auto;
-    padding: 0.94rem 1.64rem;
+    min-height: 28.32875rem;
+    padding: 2.08781rem 1.6375rem 5.28094rem 1.6375rem;
     flex-direction: column;
     align-items: flex-start;
     gap: 1.14625rem;
@@ -184,6 +189,7 @@
     width: 100%;
   }
   .input-form {
+    width: 100%;
     max-width: none;
     height: 2.45625rem;
     flex-shrink: 0;
@@ -191,5 +197,20 @@
     height: 2.5rem;
     flex-shrink: 0;
     border-radius: 0.3rem;
+  }
+}
+@media (max-width: 450px) {
+  #contato {
+    width: 100%;
+  }
+  #campos_formularios {
+    display: flex;
+    width: 24.5625rem;
+    height: 28.32875rem;
+    padding: 2.08781rem 1.6375rem 5.28094rem 1.6375rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1.14625rem;
+    flex-shrink: 0;
   }
 }

@@ -1,16 +1,13 @@
 ﻿* {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
+
 body {
   font-family: Poppins, Open Sans;
   background: #e2f5fa;
-  /* min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden; */
 }
+
 h1 {
   text-decoration: none;
   display: flex;
@@ -20,6 +17,7 @@ h1 {
   font-weight: 700;
   line-height: normal;
 }
+
 h2 {
   font-family: Poppins;
   font-size: 1.5rem;
@@ -51,19 +49,32 @@ p {
   font-weight: 400;
   line-height: normal;
 }
+
 .bold {
   font-weight: 700;
 }
+
 .container {
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
+  margin: 0 auto;
   width: 80%;
-  max-width: 1920px;
+  max-width: 120rem;
   height: 100%;
   margin: auto;
-  overflow: hidden;
 }
-main {
-  width: 100%;
+
+.botao {
+  text-decoration: none;
+  display: flex;
+  width: 17.6875rem;
+  height: 4.5rem;
+
+  font-size: 1.75rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  padding: 0.625rem 0.3125rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
 }

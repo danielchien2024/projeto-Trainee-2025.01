@@ -2,6 +2,10 @@ nav {
   position: fixed;
   top: 0;
   width: 100%;
+  max-width: 120rem;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
   height: 7rem;
   border: 1px solid rgba(85, 85, 85, 0.1);
   background: #f8f8ff;
@@ -13,6 +17,7 @@ nav {
 #conteudo-header {
   display: grid;
   grid-template-columns: auto auto;
+  justify-self: center;
   align-items: center;
   width: 100%;
   max-width: 73.75rem;
@@ -37,8 +42,9 @@ nav {
   #logo {
     display: none;
   }
-  #botoes-header {
-    justify-content: center;
+  #conteudo-header {
+    max-width: 100%; /* NOVO: faz o container ocupar toda a largura */
+    padding: 0 1rem; /* opcional: adiciona espaço nas laterais */
   }
 }
 .botaoheader {

@@ -1,72 +1,77 @@
 #quadro_azul {
+  display: grid;
   justify-self: center;
   margin-top: 1.875rem;
-  width: 120rem;
+  width: 100%;
+  max-width: 120rem;
 }
-
 /* DIV "QUEM SOMOS" */
+
 #quem_somos {
-  display: flex;
-  position: relative;
-  width: 120rem;
-  height: 18.75rem;
+  width: 100%;
+  max-width: 120rem;
+  min-height: 18.75rem;
+  height: auto;
+
   flex-shrink: 0;
   border-radius: 0.125rem 0.125rem 0rem 0rem;
   background: #89c5d5;
-  background-image: url("/img/banner_descricao/fundo-animais-icons\ 2.png");
+  background-image: url("/img/banner_descricao/fundo-animais-icons\ 3.png");
   background-size: auto;
   background-repeat: repeat;
-  background-position: top;
+  background-position: center bottom;
 }
-
+#quem_somos .container {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-template-rows: auto auto;
+}
 #titulo-quem-somos {
-  position: absolute;
-  left: 53.875rem;
-  top: 1.5rem;
-  color: #063643;
-  font-weight: 700;
-}
+  display: flex;
+  align-self: center;
+  grid-column: 2;
 
+  color: #063643;
+}
 #texto-quem-somos {
-  position: absolute;
-  top: 5.8125rem;
-  left: 53.875rem;
-  width: 43.6875rem;
+  grid-column: 2;
+  max-width: 43.6875rem;
+
   color: #0f637a;
   font-family: Open Sans;
   line-height: 1.625rem;
   letter-spacing: 0.025rem;
 }
-
 #imagens-quem_somos {
-  position: absolute;
-  left: 28.6875rem;
+  grid-row: 1/3;
+  display: flex;
+  flex-wrap: wrap;
+  justify-self: center;
+  place-content: center;
   width: 18.75rem;
   height: 18.75rem;
   flex-shrink: 0;
 }
-
 #logo-icon {
-  position: absolute;
-  top: 3.775rem;
-  left: 5.50125rem;
   width: 7.747rem;
   height: 7.14256rem;
   flex-shrink: 0;
 }
-
 #logo-name {
-  position: absolute;
-  left: 3.650625rem;
-  bottom: 3.465rem;
   width: 11.5335rem;
   height: 3.410625rem;
   flex-shrink: 0;
 }
+/* INICIO DOS PRODUTOS 
+----
+----
+----
+---- */
 #produto1 {
-  position: relative;
-  width: 120rem;
-  height: 26.13rem;
+  min-height: 26.13rem;
+  height: auto;
+
   flex-shrink: 0;
   background-color: #63b3c9;
   background-image: url("/img/banner_descricao/fundo-animais-icons\ 2.png");
@@ -74,22 +79,45 @@
   background-repeat: repeat;
   background-position: top;
 }
+#titulo-produto1 {
+  width: 100%;
+  height: 7.31rem;
+}
+
+#titulo-produto1 .container {
+  width: 60%;
+  display: flex;
+  align-items: center;
+}
 
 #titulo-produto {
-  width: 12.4375rem;
-  position: absolute;
-  top: 3.25rem;
-  left: 28.125rem;
+  padding-top: 1rem;
+  max-width: 12.4375rem;
+
   color: #063643;
   font-family: Inter;
-  font-weight: 700;
+}
+
+#imagem-texto-produto1 {
+  min-height: 18.75rem;
+  height: auto;
+  width: 100%;
+}
+
+#imagem-texto-produto1 .container {
+  min-height: 18.75rem;
+  height: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
 }
 
 #texto-produto {
-  position: absolute;
-  left: 53.875rem;
-  bottom: 7.0625rem;
-  width: 38.75rem;
+  max-width: 38.75rem;
+  grid-column: 2;
+  align-self: start;
+  padding-top: 2.31rem;
+  padding-left: 1rem;
+
   color: #063643;
   font-family: Open Sans;
   line-height: 1.875rem;
@@ -97,25 +125,40 @@
 }
 
 #doutora-gato {
-  position: absolute;
-  left: 28.125rem;
-  bottom: 1.5625rem;
+  grid-row: 1;
+  align-self: center;
+  justify-self: end;
+  width: 20rem;
+  height: 16.25rem;
+  flex-shrink: 0;
+  margin-right: 1rem;
 }
+
+/* PRODUTO 2 
+---
+---
+--- */
 
 #produto2 {
-  position: relative;
-  width: 120rem;
-  height: 20.3125rem;
+  min-height: 20.3125rem;
+  height: auto;
+
   flex-shrink: 0;
-  margin: 0 auto;
   border-radius: 0.125rem 0.125rem 0rem 0rem;
   background: #89c5d5;
+  background-image: url("/img/banner_descricao/fundo-animais-icons\ 3.png");
+  background-size: auto;
+  background-repeat: repeat;
+  background-position: center bottom;
 }
-
+#produto2 .container {
+  width: 60%;
+  display: grid;
+  grid-template-columns: 4fr 3fr;
+  align-items: center;
+}
 #doutora-cachorro {
-  position: absolute;
-  top: 1.5625rem;
-  right: 28.125rem;
+  grid-column: 2;
   width: 20rem;
   height: 16.25rem;
   flex-shrink: 0;
@@ -123,12 +166,43 @@
 }
 
 #texto-produto2 {
-  position: absolute;
-  top: 5.1875rem;
-  left: 29.125rem;
-  width: 38.75rem;
+  max-width: 38.75rem;
+  padding: 1rem 0;
   color: #063643;
   font-family: Open Sans;
   line-height: 1.875rem;
   letter-spacing: 0.025rem;
+}
+@media (max-width: 1200px) {
+  #quem_somos .container {
+    width: 80%;
+  }
+  #titulo-produto1 .container {
+    width: 80%;
+  }
+  #texto-produto {
+    padding-top: 0;
+  }
+  #produto2 .container {
+    width: 80%;
+  }
+  #quadro_azul p {
+    padding-bottom: 1rem;
+  }
+}
+@media (max-width: 800px) {
+  #quadro_azul img {
+    display: none;
+  }
+  #imagens-quem_somos {
+    display: none;
+  }
+  #quem_somos .container {
+    grid-template-rows: auto auto;
+  }
+  #quadro_azul p,
+  h3 {
+    text-align: justify;
+    grid-column: 1/3;
+  }
 }

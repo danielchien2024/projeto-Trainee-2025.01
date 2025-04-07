@@ -2,8 +2,10 @@
 
 #carousel-avaliacao {
   position: relative;
-  width: 73.75rem;
-  height: 39.125rem;
+  width: 100%;
+  max-width: 73.75rem;
+  height: auto;
+  min-height: 39.125rem;
   flex-shrink: 0;
   margin: 0 auto;
   overflow: hidden;
@@ -19,6 +21,7 @@
 .slide-avaliacao {
   position: relative;
   width: 100%;
+  min-height: 39.125rem;
   flex-shrink: 0;
   display: flex;
 }
@@ -165,21 +168,21 @@
   position: absolute;
   top: 11.125rem;
   left: 11.78rem;
-  width: 46.348rem;
+  max-width: 46.348rem;
 }
 
 .texto-avaliacao-02 {
   position: absolute;
   top: 19.313rem;
   left: 11.591rem;
-  width: 46.348rem;
+  max-width: 46.348rem;
 }
 
 .texto-avaliacao-03 {
   position: absolute;
   top: 28.25rem;
   left: 11.611rem;
-  width: 46.348rem;
+  max-width: 46.348rem;
 }
 
 .estrelas-01 {

@@ -1,51 +1,66 @@
 #nossos-profissionais {
   position: relative;
   margin: 3rem auto;
-  width: 73.75rem;
-  height: 28.75rem;
-  flex-shrink: 0;
+  max-width: 90%;
+  max-width: 73.75rem;
+  height: auto;
+  min-height: 28.75rem;
   border-radius: 0.5rem;
   background: #f8f8ff;
-  box-shadow: 0rem 0.125rem 0.25rem 0rem rgba(0, 0, 0, 0.25);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
+  padding: 2.75rem 0;
 }
 
 #titulo-nossos-profissionais {
-  position: absolute;
-  left: 5rem;
-  top: 2.75rem;
   color: #063643;
-  font-weight: 700;
+  margin-bottom: 2.5rem;
+  padding-left: 5rem;
 }
 
 #medicos {
-  display: flex;
-  justify-content: center;
-  gap: 2.5rem;
-  position: absolute;
-  justify-items: center;
-  top: 7.5rem;
-  width: 73.75rem;
-  height: 21.25rem;
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(4, 1fr); /* 4 por padrão */
+  height: 100%;
+}
+
+.medicos-individual {
+  text-align: center;
 }
 
 .foto-medico {
-  width: 15rem;
-  height: 15rem;
-  flex-shrink: 0;
+  width: 100%;
+  max-width: 15rem;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
   border-radius: 0.25rem;
+  margin: 0 auto;
 }
 
 .nome-medico {
-  display: flex;
-  justify-content: center;
   color: #063643;
   font-family: Inter;
   font-weight: 500;
 }
 
 .especializacao-medico {
-  display: flex;
-  justify-content: center;
-  color: #063643;
   font-family: Inter;
+  color: #063643;
+}
+/* Responsivo: 2 médicos por linha em telas menores */
+@media (max-width: 968px) {
+  #nossos-profissionais {
+    width: 80%;
+  }
+  #medicos {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+  }
+  .foto-medico {
+    min-width: 10.375rem;
+    min-height: 10.375rem;
+  }
+}
+
+@media (max-width: 450px) {
 }
