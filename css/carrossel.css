@@ -5,7 +5,8 @@
   display: flex;
   flex-direction: column;
   position: relative;
-  width: 73.75rem;
+  width: 95%;
+  max-width: 73.75rem;
   height: 20.75rem;
   overflow: hidden;
   flex-shrink: 0;
@@ -40,7 +41,8 @@
 #slides-container {
   display: flex;
   margin: 0 auto;
-  width: 68.38638rem;
+  width: 90%;
+  max-width: 68.38638rem;
   height: 18.75rem;
   flex-shrink: 0;
   overflow: hidden;
@@ -63,21 +65,29 @@
 
 /*FORMATAÇÃO DO SLIDE 1 DO CARROSSEL*/
 .slide1 {
+  display: grid;
   position: relative;
   flex-shrink: 0;
   background: #6bb7cb;
 }
-
+#tituloslide1,
+#textoslide1,
+#tituloslide2,
+#textoslide2,
+#tituloslide3,
+#textoslide3 {
+  z-index: 999;
+}
 #tituloslide1 {
   position: absolute;
-  top: 8%;
-  right: 15.5%;
+  top: 1.5rem;
+  right: 17.5%;
   color: #063643;
 }
 
 #textoslide1 {
   position: absolute;
-  left: 31.87rem;
+  right: 24.97%;
   top: 4.88rem;
   color: #0f637a;
   font-size: 1.25rem;
@@ -117,7 +127,7 @@
 #gato1 {
   position: absolute;
   top: 6.25rem;
-  right: 6.95rem;
+  right: 10.11%;
   width: 7.5rem;
   height: 12.22931rem;
   flex-shrink: 0;
@@ -129,7 +139,7 @@
   background: #f8f8ff;
   color: #063643;
   top: 9.94rem;
-  left: 31.88rem;
+  right: 27.53%;
 }
 /* FORMATAÇÃO DO SLIDE 2 DO CARROSSEL */
 .slide2 {
@@ -172,14 +182,14 @@
 #cachorrofeliz {
   position: absolute;
   top: 5.56rem;
-  left: 40.25rem;
+  left: 58.88%;
   width: 12.5rem;
   height: 18.622rem;
   flex-shrink: 0;
 }
 #gato_lado {
   position: absolute;
-  left: 59.31rem;
+  left: 86.74%;
   right: -0.31rem;
   width: 9.375rem;
   height: 19.625rem;
@@ -278,4 +288,63 @@
 
 .manual-btn.active {
   background-color: #6bb7cb;
+}
+/* Por padrão, esconde */
+#guarda_chuva {
+  display: none;
+}
+
+/* Só mostra quando estiver no slide 3 (index 2) */
+body.slide-2 #guarda_chuva {
+  display: block;
+}
+@media (max-width: 1050px) {
+  #pata2,
+  #guarda_chuva {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  #ciringa {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  #pata1,
+  #cachorrofeliz {
+    display: none;
+  }
+  #tituloslide1,
+  #textoslide1,
+  #tituloslide2,
+  #textoslide2,
+  #tituloslide3,
+  #textoslide3,
+  .btn-slide1,
+  .btn-slide2,
+  .btn-slide3 {
+    flex-wrap: nowrap;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    right: auto; /* remove o right pra não conflitar */
+  }
+  #carrossel-container h1 {
+    font-size: 1.5rem;
+  }
+  #tituloslide1,
+  #textoslide1,
+  #tituloslide2,
+  #textoslide2,
+  #tituloslide3,
+  #textoslide3 {
+    display: flex;
+    width: 95%;
+    justify-content: center;
+  }
+  #textoslide3 {
+    display: none;
+  }
 }

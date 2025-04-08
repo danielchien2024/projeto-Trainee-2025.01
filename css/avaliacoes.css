@@ -2,14 +2,15 @@
 
 #carousel-avaliacao {
   position: relative;
-  width: 100%;
+  display: flex;
+  width: 80%;
   max-width: 73.75rem;
   height: auto;
   min-height: 39.125rem;
   flex-shrink: 0;
   margin: 0 auto;
-  overflow: hidden;
   border-radius: 0.625rem;
+  overflow: hidden;
 }
 
 .carousel-container-avaliacao {
@@ -20,34 +21,34 @@
 
 .slide-avaliacao {
   position: relative;
+  display: flex;
+  flex-direction: row;
   width: 100%;
   min-height: 39.125rem;
   flex-shrink: 0;
-  display: flex;
-}
-
-.buttons-avaliacao {
-  width: 100%;
+  overflow: hidden;
 }
 
 /* Estilo das setas */
 #seta-avancar-avaliacao {
+  position: absolute;
+  bottom: 4.48%;
+  right: 6.87%;
+
   display: inline-flex;
   padding: 0.3125rem 0.625rem;
   align-items: center;
   gap: 0.625rem;
   border-radius: 0.5rem;
-  position: absolute;
-  bottom: 1.75rem;
-  right: 5.0625rem;
   border-radius: 0.5rem;
   border: 1px solid #063643;
 }
 
 #seta-volta-avaliacao {
   position: absolute;
-  bottom: 1.75rem;
-  right: 9.5rem;
+  bottom: 4.48%;
+  right: 12.88%;
+
   display: inline-flex;
   padding: 0.3125rem 0.625rem;
   align-items: center;
@@ -58,8 +59,10 @@
 
 #indice-avaliacao {
   position: absolute;
-  left: 64.72rem;
-  top: 35.3rem;
+  display: flex;
+  right: 11.44%;
+  bottom: 4.5%;
+
   color: #063643;
   line-height: 1.875rem;
   letter-spacing: 0.01125rem;
@@ -69,7 +72,7 @@
 .buttons-avaliacao button {
   cursor: pointer;
   font-size: 1.125rem;
-  background-color: transparent;
+  border: none;
 }
 
 .container-estrelas {
@@ -138,7 +141,8 @@
 }
 
 #img-comentario-03 {
-  width: 5.063rem;
+  width: 100%;
+  max-width: 5.063rem;
   height: 5rem;
   flex-shrink: 0;
   position: absolute;
@@ -168,6 +172,7 @@
   position: absolute;
   top: 11.125rem;
   left: 11.78rem;
+  width: 100%;
   max-width: 46.348rem;
 }
 
@@ -175,6 +180,7 @@
   position: absolute;
   top: 19.313rem;
   left: 11.591rem;
+  width: 100%;
   max-width: 46.348rem;
 }
 
@@ -182,6 +188,7 @@
   position: absolute;
   top: 28.25rem;
   left: 11.611rem;
+  width: 100%;
   max-width: 46.348rem;
 }
 
@@ -205,10 +212,89 @@
 
 .imagem-entre-um {
   position: absolute;
-  top: 14.563rem;
+  top: 37.22%;
+  left: 10.38%;
 }
 
 .imagem-entre-dois {
   position: absolute;
   top: 23.25rem;
+}
+.texto-avaliacao-01,
+.texto-avaliacao-02,
+.texto-avaliacao-03 {
+  position: absolute;
+  white-space: normal;
+  word-break: break-word;
+  overflow-wrap: break-word;
+  left: 11.78rem;
+  max-width: calc(100% - 13rem); /* 100% da tela menos o espaço da imagem */
+  width: 100%;
+}
+@media (max-width: 1030px) {
+  /* #indice-avaliacao {
+    right: 12%;
+  } */
+}
+@media (max-width: 950px) {
+  #indice-avaliacao {
+    right: 12.5%;
+  }
+  #seta-volta-avaliacao {
+    right: 15%;
+  }
+}
+@media (max-width: 870px) {
+  #indice-avaliacao {
+    right: 13%;
+  }
+  #seta-volta-avaliacao {
+    right: 15%;
+  }
+}
+
+@media (max-width: 728px) {
+  .imagem-entre-avaliacoes {
+    display: none;
+  }
+  .slide-avaliacao #titulo-avaliacao {
+    position: absolute;
+    top: 2.875rem;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+  }
+  .slide-avaliacao .img-comentario {
+    position: absolute;
+    left: 1.51%;
+
+    width: 3.33975rem;
+    height: 3.30994rem;
+    flex-shrink: 0;
+  }
+  #img-comentario-01 {
+    width: 5.04506rem;
+    height: 5rem;
+    flex-shrink: 0;
+    position: absolute;
+    top: 7.938rem;
+    left: 5rem;
+  }
+  .nome-avaliacao-01 {
+    position: absolute;
+    top: 9.125rem;
+    left: 11.78rem;
+  }
+  .texto-avaliacao-01 {
+    position: absolute;
+    top: 11.125rem;
+    left: 11.78rem;
+    width: 100%;
+    max-width: 46.348rem;
+  }
+  .estrelas-01 {
+    position: absolute;
+    top: 7.375rem;
+    left: 11.78rem;
+  }
 }

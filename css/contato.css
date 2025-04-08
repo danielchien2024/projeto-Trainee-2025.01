@@ -203,14 +203,4 @@
   #contato {
     width: 100%;
   }
-  #campos_formularios {
-    display: flex;
-    width: 24.5625rem;
-    height: 28.32875rem;
-    padding: 2.08781rem 1.6375rem 5.28094rem 1.6375rem;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 1.14625rem;
-    flex-shrink: 0;
-  }
 }

@@ -61,6 +61,14 @@
     min-height: 10.375rem;
   }
 }
-
+@media (max-width: 550px) {
+  #nossos-profissionais {
+    width: 100%;
+  }
+}
 @media (max-width: 450px) {
+  .foto-medico {
+    width: 10.375rem;
+    height: 10.375rem;
+  }
 }

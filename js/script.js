@@ -18,12 +18,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Movimentação do carrossel
     slidesContainer.style.transform = `translateX(-${currentSlide * 100}%)`;
-    slidesContainer.style.transition = "transform 0.5s ease-in-out";
+    slidesContainer.style.transition = "transform 0.2s ease";
 
     // Atualizar botão ativo
     manualBtns.forEach((btn, i) => {
       btn.classList.toggle("active", i === currentSlide);
     });
+
+    // Atualizar classe no body com o slide atual
+    document.body.classList.remove("slide-0", "slide-1", "slide-2");
+    document.body.classList.add(`slide-${currentSlide}`);
   }
 
   // Eventos de clique nas setas

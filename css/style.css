@@ -1,8 +1,13 @@
-﻿* {
+﻿html {
+  scroll-behavior: smooth;
+}
+* {
   margin: 0;
   padding: 0;
 }
-
+section {
+  scroll-margin-top: 150px; /* ajuste esse valor conforme a altura do header */
+}
 body {
   font-family: Poppins, Open Sans;
   background: #e2f5fa;
@@ -72,7 +77,6 @@ p {
   font-style: normal;
   font-weight: 700;
   line-height: normal;
-  padding: 0.625rem 0.3125rem;
   justify-content: center;
   align-items: center;
   gap: 0.625rem;
