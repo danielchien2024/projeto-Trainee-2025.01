@@ -15,14 +15,80 @@ nav {
 }
 
 #conteudo-header {
-  display: grid;
-  grid-template-columns: auto auto;
-  justify-self: center;
-  align-items: center;
-  width: 100%;
-  max-width: 73.75rem;
-  height: 100%;
+  display: flex;                 /* NOVO: Usando Flexbox para layout */
+  justify-content: space-between;/* NOVO: Logo à esquerda, botões à direita */
+  align-items: center;           /* Mantido: Alinha verticalmente ao centro */
+  width: 100%;                   /* Mantido: Largura total */
+  max-width: 73.75rem;           /* Mantido: Largura máxima (1180px) */
+  margin: 0 auto;                /* NOVO: Centraliza o container na página */
+  height: 70px;                  /* NOVO: Altura fixa (ajuste se necessário). Seu height: 100% original pode ser vago sem um pai definido. */
+  padding: 10px 20px;            /* NOVO: Espaçamento interno (ajuste se precisar) */
+  position: relative;            /* NOVO: Necessário para posicionar o menu mobile depois */
 }
+
+/* Estilo do Link do Logo (necessário para o posicionamento mobile) */
+.link-logo {
+  display: inline-block;
+  line-height: 0; /* Remove espaço extra abaixo da imagem */
+}
+
+#logo-horizontal {
+  display: block; /* Mostra o logo horizontal por padrão */
+  max-height: 50px; /* Ajuste o tamanho conforme seu logo */
+  width: auto;
+}
+
+#logo-vertical {
+  display: none; /* Esconde o logo vertical por padrão */
+  max-height: 55px; /* Ajuste o tamanho conforme seu logo */
+  width: auto;
+}
+
+#botoes-header {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex; /* NOVO: Alinha os botões horizontalmente */
+  gap: 20px;     /* NOVO: Espaço entre os botões (ajuste) */
+}
+
+.botaoheader {
+  /* --- Seus estilos originais mantidos --- */
+  text-decoration: none;
+  color: #063643;
+  font-size: 1.5rem; /* 24px */
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  /* --- Adicionado para melhor clique/visual --- */
+  padding: 8px 12px; /* Adiciona área de clique e espaçamento interno */
+  border-radius: 0.625rem; /* Movido do hover para estar sempre presente */
+  background: transparent; /* Garante fundo transparente por padrão */
+  transition: background-color 0.3s ease; /* Transição suave para o hover */
+}
+
+.botaoheader:hover {
+  /* --- Seu estilo hover original mantido --- */
+  background-color: rgba(107, 183, 203, 0.4); /* Usar background-color */
+  /* background-clip não é necessário aqui com padding */
+}
+
+#botao-menu-mobile {
+  display: none; /* Esconde o botão hamburger no desktop */
+  background: none;
+  border: none;
+  padding: 5px;
+  cursor: pointer;
+  color: #063643; /* Usa a cor dos seus botões */
+}
+
+#botao-menu-mobile svg { /* Estilo se usar SVG */
+  display: block;
+  width: 50px;
+  height: 50px;
+  stroke: currentColor; /* Usa a cor definida no botão */
+}
+
 #banner-central .container {
   width: 100%;
 }
@@ -38,26 +104,43 @@ nav {
   gap: 0.625rem;
   padding: 0rem 0.25rem;
 }
-@media (max-width: 700px) {
-  #logo {
-    display: none;
+/* --- MEDIA QUERY PARA MOBILE (<= 393px) --- */
+
+@media (max-width: 393px) {
+  nav {
+    margin-top: 2rem;
   }
+  
   #conteudo-header {
-    max-width: 100%; /* NOVO: faz o container ocupar toda a largura */
-    padding: 0 1rem; /* opcional: adiciona espaço nas laterais */
+      justify-content: flex-start; /* NOVO: Alinha itens à esquerda (para o botão hamburger) */
+      padding: 0px;
   }
-}
-.botaoheader {
-  text-decoration: none;
-  color: #063643;
-  font-size: 1.5rem;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-}
-.botaoheader:hover {
-  background: rgba(107, 183, 203, 0.4);
-  background-clip: content-box;
-  border-radius: 0.625rem;
-  background-clip: padding-box;
+
+  #botoes-header {
+      display: none; /* Esconde a lista de botões */
+  }
+
+  /* Esconde logo horizontal (era #logo no seu original, agora #logo-horizontal) */
+  #logo-horizontal {
+      display: none;
+  }
+
+  /* Mostra e centraliza logo vertical */
+  #logo-vertical {
+      display: block;
+  }
+
+  .link-logo { /* Container dos logos */
+       position: absolute;
+       left: 50%;
+       top: 50%;
+       transform: translate(-50%, -50%); /* Centraliza */
+       z-index: 1;
+  }
+
+  /* Mostra botão hamburger */
+  #botao-menu-mobile {
+      display: block;
+      z-index: 2; /* Garante que fique acima do logo se sobrepor */
+  }
 }
