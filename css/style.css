@@ -60,9 +60,12 @@ p {
 }
 
 .container {
+  display: flex;
   margin: 0 auto;
   width: 80%;
   max-width: 120rem;
+  align-items: center;
+  justify-content: space-between;
   height: 100%;
   margin: auto;
 }
