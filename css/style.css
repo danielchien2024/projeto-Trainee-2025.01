@@ -85,3 +85,9 @@ p {
   gap: 0.625rem;
   flex-shrink: 0;
 }
+
+@media (max-width: 600px) {
+  .container {
+    width: 90%;
+  }
+}

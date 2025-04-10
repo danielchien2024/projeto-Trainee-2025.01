@@ -1,485 +1,933 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Pindorama Pets</title>
 
-<head>
-	<meta charset="UTF-8" />
-	<title>Pindorama Pets</title>
+    <!-- Ícone da aba -->
+    <link rel="icon" href="img/logo/logo-icon.png" type="image/png" />
+    <!-- Fontes  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-	<!-- Ícone da aba -->
-	<link rel="icon" href="img/logo/logo-icon.png" type="image/png" />
-	<!-- Fontes  -->
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
-	<link rel="preconnect" href="https://fonts.googleapis.com" />
-	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="/css/header.css" />
+    <link rel="stylesheet" href="/css/banner-central.css" />
+    <link rel="stylesheet" href="/css/carrossel.css" />
+    <link rel="stylesheet" href="/css/quem-somos.css" />
+    <link rel="stylesheet" href="/css/equipe.css" />
+    <link rel="stylesheet" href="/css/avaliacoes.css" />
+    <link rel="stylesheet" href="/css/contato.css" />
+    <link rel="stylesheet" href="/css/footer.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
 
-	<!-- Estilos -->
-	<link rel="stylesheet" href="css/style.css" />
-	<link rel="stylesheet" href="/css/header.css">
-	<link rel="stylesheet" href="/css/banner-central.css">
-	<link rel="stylesheet" href="/css/carrossel.css">
-	<link rel="stylesheet" href="/css/quem-somos.css">
-	<link rel="stylesheet" href="/css/equipe.css">
-	<link rel="stylesheet" href="/css/avaliacoes.css">
-	<link rel="stylesheet" href="/css/contato.css">
-	<link rel="stylesheet" href="/css/footer.css">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-</head>
-
-<body>
-
-	<nav>
-    <div class="container">
+  <body>
+    <nav>
+      <div class="container">
         <div id="conteudo-header">
+          <button
+            id="botao-menu-mobile"
+            aria-label="Abrir menu"
+            aria-expanded="false"
+          >
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
 
-            <button id="botao-menu-mobile" aria-label="Abrir menu" aria-expanded="false">
-                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                    <line x1="3" y1="12" x2="21" y2="12"></line>
-                    <line x1="3" y1="6" x2="21" y2="6"></line>
-                    <line x1="3" y1="18" x2="21" y2="18"></line>
-                </svg>
-                </button>
+          <a href="#" class="link-logo">
+            <img
+              id="logo-horizontal"
+              src="img/logo/Logo-horizontal.png"
+              alt="Logo da Pindorama Pets (Horizontal)"
+            />
+            <img
+              id="logo-vertical"
+              src="img/logo/logo-icon.png"
+              alt="Logo da Pindorama Pets (Vertical)"
+            />
+          </a>
 
-            <a href="#" class="link-logo"> <img id="logo-horizontal" src="img/logo/Logo-horizontal.png" alt="Logo da Pindorama Pets (Horizontal)" />
-                <img id="logo-vertical" src="img/logo/logo-icon.png" alt="Logo da Pindorama Pets (Vertical)" />
-            </a>
-
-            <ul id="botoes-header">
-                <li><a class="botaoheader" href="#">Início</a></li>
-                <li><a class="botaoheader" href="#quadro_azul">Serviços</a></li>
-                <li><a class="botaoheader" href="#nossos-profissionais">Sobre nós</a></li>
-                <li><a class="botaoheader" href="#contato">Contato</a></li>
-            </ul>
-
+          <ul id="botoes-header">
+            <li><a class="botaoheader" href="#">Início</a></li>
+            <li><a class="botaoheader" href="#quadro_azul">Serviços</a></li>
+            <li>
+              <a class="botaoheader" href="#nossos-profissionais">Sobre nós</a>
+            </li>
+            <li><a class="botaoheader" href="#contato">Contato</a></li>
+          </ul>
         </div>
-    </div>
-</nav>
+      </div>
+    </nav>
 
-	<main>
-		<section id="bannercentral">
-			<div class="container">
-				<h1 id="titulo-banner-central">Cuidando do Seu Pet com Profissionalismo e Carinho</h1>
-				<a href="/" class="botao btn-banner-central">Entre em contato</a>
-				<div id="animais">
-					<img id="animais2" src="/img/banner1/animais2.png" alt="Mais cães e gatos" />
-					<img id="animais1" src="/img/banner1/animais1.png" alt="Cães e gatos" />
-					<img id="gatocinza" src="/img/banner1/gato.png" alt="Gato" />
-				</div>
-			</div>
-			<img id="waveform" src="/img/banner1/Waveform.png" alt="Forma" />
+    <main>
+      <section id="bannercentral">
+        <div class="container">
+          <h1 id="titulo-banner-central">
+            Cuidando do Seu Pet com Profissionalismo e Carinho
+          </h1>
+          <a href="/" class="botao btn-banner-central">Entre em contato</a>
+          <div id="animais">
+            <img
+              id="animais2"
+              src="/img/banner1/animais2.png"
+              alt="Mais cães e gatos"
+            />
+            <img
+              id="animais1"
+              src="/img/banner1/animais1.png"
+              alt="Cães e gatos"
+            />
+            <img id="gatocinza" src="/img/banner1/gato.png" alt="Gato" />
+          </div>
+        </div>
+        <img id="waveform" src="/img/banner1/Waveform.png" alt="Forma" />
+      </section>
 
-		</section>
+      <section id="carrossel-container">
+        <button class="seta volta">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="43"
+            height="40"
+            viewBox="0 0 43 40"
+            fill="none"
+          >
+            <path
+              d="M28.6063 36.6666L10.7275 19.9999L28.6063 3.33325L31.7798 6.29159L17.0745 19.9999L31.7798 33.7083L28.6063 36.6666Z"
+              fill="#063643"
+            />
+          </svg>
+        </button>
+        <button class="seta frente">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="43"
+            height="40"
+            viewBox="0 0 43 40"
+            fill="none"
+          >
+            <path
+              d="M14.3937 3.33325L32.2725 19.9999L14.3937 36.6666L11.2202 33.7083L25.9255 19.9999L11.2202 6.29159L14.3937 3.33325Z"
+              fill="#063643"
+            />
+          </svg>
+        </button>
 
-		<section id="carrossel-container">
-			<button class="seta volta">
-				<svg xmlns="http://www.w3.org/2000/svg" width="43" height="40" viewBox="0 0 43 40" fill="none">
-					<path d="M28.6063 36.6666L10.7275 19.9999L28.6063 3.33325L31.7798 6.29159L17.0745 19.9999L31.7798 33.7083L28.6063 36.6666Z" fill="#063643" />
-				</svg>
-			</button>
-			<button class="seta frente">
-				<svg xmlns="http://www.w3.org/2000/svg" width="43" height="40" viewBox="0 0 43 40" fill="none">
-					<path d="M14.3937 3.33325L32.2725 19.9999L14.3937 36.6666L11.2202 33.7083L25.9255 19.9999L11.2202 6.29159L14.3937 3.33325Z" fill="#063643" />
-				</svg>
-			</button>
+        <div id="slides-container">
+          <div class="slides">
+            <div class="slide slide1">
+              <h1 id="tituloslide1">Campanha de vacinação</h1>
+              <p id="textoslide1">Nos dias 19 a 28 de novembro</p>
+              <a class="botao btn-slide1" href="/">Saiba mais</a>
+              <img
+                src="/img/carrossel/ciringa.png"
+                id="ciringa"
+                alt="ciringa"
+              />
+              <img src="/img/carrossel/pata1.png" id="pata1" alt="pata 1" />
+              <img src="/img/carrossel/pata2.png" id="pata2" alt="pata 2" />
+              <img src="/img/carrossel/gato.png" id="gato1" alt="gato1" />
+            </div>
 
-			<div id="slides-container">
-				<div class="slides">
-					<div class="slide slide1">
-						<h1 id="tituloslide1">Campanha de vacinação</h1>
-						<p id="textoslide1">Nos dias 19 a 28 de novembro</p>
-						<a class="botao btn-slide1" href="/">Saiba mais</a>
-						<img src="/img/carrossel/ciringa.png" id="ciringa" alt="ciringa" />
-						<img src="/img/carrossel/pata1.png" id="pata1" alt="pata 1" />
-						<img src="/img/carrossel/pata2.png" id="pata2" alt="pata 2" />
-						<img src="/img/carrossel/gato.png" id="gato1" alt="gato1" />
-					</div>
+            <div class="slide slide2">
+              <h1 id="tituloslide2">Campanha de adoção</h1>
+              <p id="textoslide2">
+                Dê um lar cheio de amor a quem só quer te fazer feliz! Adote um
+                amigo de quatro patas e transforme sua vida e a dele.
+              </p>
+              <a class="botao btn-slide2" href="/">Saiba mais</a>
+              <img
+                id="cachorrofeliz"
+                src="/img/carrossel/cachorro.png"
+                alt="Cachorro Sorridente"
+              />
+              <img
+                id="gato_lado"
+                src="/img/carrossel/gato_lado.png"
+                alt="Gato"
+              />
+            </div>
 
-					<div class="slide slide2">
-						<h1 id="tituloslide2">Campanha de adoção</h1>
-						<p id="textoslide2">
-							Dê um lar cheio de amor a quem só quer te fazer feliz! Adote
-							um amigo de quatro patas e transforme sua vida e a dele.
-						</p>
-						<a class="botao btn-slide2" href="/">Saiba mais</a>
-						<img id="cachorrofeliz" src="/img/carrossel/cachorro.png" alt="Cachorro Sorridente" />
-						<img id="gato_lado" src="/img/carrossel/gato_lado.png" alt="Gato" />
-					</div>
+            <div class="slide slide3">
+              <h1 id="tituloslide3">
+                Banho e tosa: cuidado e saúde para seu pet
+              </h1>
+              <p id="textoslide3">
+                Nossa clínica dispõe do serviço de higiene para seu Pet
+                permanecer limpo, cheiroso e longe de parasitas.
+              </p>
+              <a class="botao btn-slide3" href="/">Saiba mais</a>
+              <img
+                id="gato_banho"
+                src="/img/carrossel/gato_banho.png"
+                alt="Gato de toalha"
+              />
+              <img
+                id="guarda_chuva"
+                src="/img/carrossel/guarda_chuva.png"
+                alt="Guarda Chuva"
+              />
+            </div>
+          </div>
+        </div>
+        <!-- Botões de navegação -->
+        <div class="manual-navigation">
+          <span class="manual-btn active"></span>
+          <span class="manual-btn"></span>
+          <span class="manual-btn"></span>
+        </div>
+      </section>
 
-					<div class="slide slide3">
-						<h1 id="tituloslide3">
-							Banho e tosa: cuidado e saúde para seu pet
-						</h1>
-						<p id="textoslide3">
-							Nossa clínica dispõe do serviço de higiene para seu Pet
-							permanecer limpo, cheiroso e longe de parasitas.
-						</p>
-						<a class="botao btn-slide3" href="/">Saiba mais</a>
-						<img id="gato_banho" src="/img/carrossel/gato_banho.png" alt="Gato de toalha" />
-						<img id="guarda_chuva" src="/img/carrossel/guarda_chuva.png" alt="Guarda Chuva" />
-					</div>
-				</div>
-			</div>
-			<!-- Botões de navegação -->
-			<div class="manual-navigation">
-				<span class="manual-btn active"></span>
-				<span class="manual-btn"></span>
-				<span class="manual-btn"></span>
-			</div>
-		</section>
+      <section id="quadro_azul">
+        <div id="quem_somos">
+          <div class="container">
+            <div id="imagens-quem_somos">
+              <img
+                id="logo-icon"
+                src="/img/logo/logo-icon.png"
+                alt="Ícone da Logo"
+              />
+              <img
+                id="logo-name"
+                src="/img/logo/Logo-name.png"
+                alt="Nome da Logo"
+              />
+            </div>
+            <h2 class="bold" id="titulo-quem-somos">Quem somos?</h2>
+            <p id="texto-quem-somos">
+              Nossa clínica veterinária é comprometida com o cuidado e bem-estar
+              de cada pet, com uma equipe dedicada e instalações modernas,
+              buscamos garantir saúde e conforto em cada atendimento. Cuidamos
+              do seu animalzinho como se fosse nosso!
+            </p>
+            <h3 id="quem-somos-cta">Cuidamos do seu animalzinho com amor!</h3>
+          </div>
+        </div>
 
-		<section id="quadro_azul">
-			<div id="quem_somos">
-				<div class="container">
-					<div id="imagens-quem_somos">
-						<img id="logo-icon" src="/img/logo/logo-icon.png" alt="Ícone da Logo" />
-						<img id="logo-name" src="/img/logo/Logo-name.png" alt="Nome da Logo" />
-					</div>
-					<h2 class="bold" id="titulo-quem-somos">Quem somos?</h2>
-					<p id="texto-quem-somos">
-						Nossa clínica veterinária é comprometida com o cuidado e bem-estar
-						de cada pet, com uma equipe dedicada e instalações modernas,
-						buscamos garantir saúde e conforto em cada atendimento. Cuidamos
-						do seu animalzinho como se fosse nosso!
-					</p>
-				</div>
-			</div>
+        <div id="produto1">
+          <div id="titulo-produto1">
+            <div class="container">
+              <h2 class="bold" id="titulo-produto">Nossos serviços</h2>
+            </div>
+          </div>
+          <div id="imagem-texto-produto1">
+            <div class="container">
+              <p id="texto-produto">
+                Na nossa clínica veterinária, cada consulta é realizada com
+                dedicação e atenção aos detalhes, garantindo o melhor cuidado
+                para o seu pet. Contamos com uma equipe experiente e atualizada
+                para oferecer diagnósticos precisos e tratamentos eficazes.
+              </p>
+              <img
+                id="doutora-gato"
+                src="/img/banner_descricao/doutora-gato.png"
+                alt="Veterinária consultando um gato"
+              />
+            </div>
+          </div>
+          <button id="botao-produto1">Agende uma consulta</button>
+        </div>
 
+        <div id="produto2">
+          <div class="container">
+            <h3 id="texto-produto2">
+              Nós cuidamos do seu pet com o carinho e respeito que ele merece.
+              Nossa equipe dedica atenção a cada detalhe, proporcionando um
+              ambiente acolhedor e seguro para que seu animalzinho se sinta em
+              casa.
+            </h3>
+            <img
+              id="doutora-cachorro"
+              src="/img/banner_descricao/doutora-cachorro.png"
+              alt="Veterinária consultando um cachorro"
+            />
+          </div>
+        </div>
+      </section>
 
-			<div id="produto1">
-				<div id="titulo-produto1">
-					<div class="container">
-						<h2 class="bold" id="titulo-produto">Nossos serviços</h2>
-					</div>
-				</div>
-				<div id="imagem-texto-produto1">
-					<div class="container">
-						<p id="texto-produto">
-							Na nossa clínica veterinária, cada consulta é realizada com
-							dedicação e atenção aos detalhes, garantindo o melhor cuidado para
-							o seu pet. Contamos com uma equipe experiente e atualizada para
-							oferecer diagnósticos precisos e tratamentos eficazes.
-						</p>
-						<img id="doutora-gato" src="/img/banner_descricao/doutora-gato.png" alt="Veterinária consultando um gato" />
-					</div>
-				</div>
+      <section id="nossos-profissionais">
+        <h2 class="bold" id="titulo-nossos-profissionais">
+          Nossos profissionais
+        </h2>
+        <div id="medicos">
+          <div class="medicos-individual">
+            <img
+              class="foto-medico"
+              src="/img/profissionais/carlos.png"
+              alt="Carlos"
+            />
+            <p class="nome-medico">Carlos de Souza</p>
+            <p class="texto-detalhes especializacao-medico">
+              Cirurgia Veterinária
+            </p>
+          </div>
+          <div class="medicos-individual">
+            <img
+              class="foto-medico"
+              src="/img/profissionais/joao.png"
+              alt="João"
+            />
+            <p class="nome-medico">João Paulo</p>
+            <p class="especializacao-medico">Dermatologia Veterinária</p>
+          </div>
+          <div class="medicos-individual">
+            <img
+              class="foto-medico"
+              src="/img/profissionais/jose.png"
+              alt="José"
+            />
+            <p class="nome-medico">José da Silva</p>
+            <p class="especializacao-medico">Patologia</p>
+          </div>
+          <div class="medicos-individual">
+            <img
+              class="foto-medico"
+              src="/img/profissionais/fulano.png"
+              alt="Fulano gerado por IA"
+            />
+            <p class="nome-medico">Fulano</p>
+            <p class="especializacao-medico">Anestesiologia</p>
+          </div>
+        </div>
+      </section>
 
-			</div>
+      <section id="carousel-avaliacao">
+        <div class="carousel-container-avaliacao">
+          <!--CONTEÚDO SLIDE 1 -->
 
-			<div id="produto2">
-				<div class="container">
-					<h3 id="texto-produto2">
-						Nós cuidamos do seu pet com o carinho e respeito que ele merece.
-						Nossa equipe dedica atenção a cada detalhe, proporcionando um
-						ambiente acolhedor e seguro para que seu animalzinho se sinta em
-						casa.
-					</h3>
-					<img id="doutora-cachorro" src="/img/banner_descricao/doutora-cachorro.png" alt="Veterinária consultando um cachorro" />
-				</div>
-			</div>
-		</section>
+          <div class="slide-avaliacao">
+            <h2 id="titulo-avaliacao">Avaliações (34)</h2>
+            <p id="indice-avaliacao">1</p>
 
-		<section id="nossos-profissionais">
-			<h2 class="bold" id="titulo-nossos-profissionais">Nossos profissionais</h2>
-			<div id="medicos">
-				<div class="medicos-individual">
-					<img class="foto-medico" src="/img/profissionais/carlos.png" alt="Carlos" />
-					<p class="nome-medico">Carlos de Souza</p>
-					<p class="texto-detalhes especializacao-medico">Cirurgia Veterinária</p>
-				</div>
-				<div class="medicos-individual">
-					<img class="foto-medico" src="/img/profissionais/joao.png" alt="João" />
-					<p class="nome-medico">João Paulo</p>
-					<p class="especializacao-medico">Dermatologia Veterinária</p>
-				</div>
-				<div class="medicos-individual">
-					<img class="foto-medico" src="/img/profissionais/jose.png" alt="José" />
-					<p class="nome-medico">José da Silva</p>
-					<p class="especializacao-medico">Patologia</p>
-				</div>
-				<div class="medicos-individual">
-					<img class="foto-medico" src="/img/profissionais/fulano.png" alt="Fulano gerado por IA" />
-					<p class="nome-medico">Fulano</p>
-					<p class="especializacao-medico">Anestesiologia</p>
-				</div>
-			</div>
-		</section>
+            <img
+              class="img-comentario"
+              id="img-comentario-01"
+              src="/img/comentario/comentario1.png"
+              alt="Foto do comentario"
+            />
+            <h3 class="nome-avaliacao nome-avaliacao-01">Carlos Alberto</h3>
+            <p class="texto-avaliacao texto-avaliacao-01">
+              Atendimento excepcional! A equipe foi muito cuidadosa e atenciosa
+              com meu pet.
+            </p>
 
-		<section id="carousel-avaliacao">
-			<div class="carousel-container-avaliacao">
-				<!--CONTEÚDO SLIDE 1 -->
+            <div class="container-estrelas estrelas-01">
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+            </div>
+            <svg
+              class="imagem-entre-avaliacoes imagem-entre-um"
+              width="900"
+              height="2"
+              viewBox="0 0 900 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="900"
+                height="2"
+                transform="matrix(1 0 0 -1 0 2)"
+                fill="black"
+                fill-opacity="0.1"
+              />
+            </svg>
 
-				<div class="slide-avaliacao">
-					<h2 id="titulo-avaliacao">Avaliações (34)</h2>
-					<p id="indice-avaliacao">1</p>
+            <img
+              class="img-comentario"
+              id="img-comentario-02"
+              src="/img/comentario/comentario2.png"
+              alt="Foto do comentario"
+            />
+            <h3 class="nome-avaliacao nome-avaliacao-02">Neymar Jr</h3>
+            <p class="texto-avaliacao texto-avaliacao-02">
+              Não poderia estar mais feliz com o serviço desta clínica.
+              Profissionais qualificados e atenciosos.
+            </p>
 
-					<img class="img-comentario" id="img-comentario-01" src="/img/comentario/comentario1.png" alt="Foto do comentario" />
-					<h3 class="nome-avaliacao nome-avaliacao-01">Carlos Alberto</h3>
-					<p class="texto-avaliacao texto-avaliacao-01">
-						Atendimento excepcional! A equipe foi muito cuidadosa e
-						atenciosa com meu pet.
-					</p>
+            <div class="container-estrelas estrelas-02">
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+            </div>
+            <svg
+              class="imagem-entre-avaliacoes imagem-entre-dois"
+              width="900"
+              height="2"
+              viewBox="0 0 900 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="900"
+                height="2"
+                transform="matrix(1 0 0 -1 0 2)"
+                fill="black"
+                fill-opacity="0.1"
+              />
+            </svg>
 
-					<div class="container-estrelas estrelas-01">
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-					</div>
-					<svg class="imagem-entre-avaliacoes imagem-entre-um" width="900" height="2" viewBox="0 0 900 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="900" height="2" transform="matrix(1 0 0 -1 0 2)" fill="black" fill-opacity="0.1" />
-					</svg>
+            <img
+              class="img-comentario"
+              id="img-comentario-03"
+              src="/img/comentario/comentario3.png"
+              alt="Foto do comentario"
+            />
+            <h3 class="nome-avaliacao nome-avaliacao-03">Josseana da Silva</h3>
+            <p class="texto-avaliacao texto-avaliacao-03">
+              Excelente clínica! Desde o primeiro contato, fui atendido com
+              profissionalismo e gentileza.
+            </p>
 
-					<img class="img-comentario" id="img-comentario-02" src="/img/comentario/comentario2.png" alt="Foto do comentario" />
-					<h3 class="nome-avaliacao nome-avaliacao-02">Neymar Jr</h3>
-					<p class="texto-avaliacao texto-avaliacao-02">
-						Não poderia estar mais feliz com o serviço desta clínica.
-						Profissionais qualificados e atenciosos.
-					</p>
+            <div class="container-estrelas estrelas-03">
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+            </div>
+          </div>
 
-					<div class="container-estrelas estrelas-02">
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-					</div>
-					<svg class="imagem-entre-avaliacoes imagem-entre-dois" width="900" height="2" viewBox="0 0 900 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="900" height="2" transform="matrix(1 0 0 -1 0 2)" fill="black" fill-opacity="0.1" />
-					</svg>
+          <!-- CONTEÚDO SLIDE 2 -->
 
-					<img class="img-comentario" id="img-comentario-03" src="/img/comentario/comentario3.png" alt="Foto do comentario" />
-					<h3 class="nome-avaliacao nome-avaliacao-03">Josseana da Silva</h3>
-					<p class="texto-avaliacao texto-avaliacao-03">
-						Excelente clínica! Desde o primeiro contato, fui atendido com
-						profissionalismo e gentileza.
-					</p>
+          <div class="slide-avaliacao">
+            <h2 id="titulo-avaliacao">Avaliações (34)</h2>
+            <p id="indice-avaliacao">2</p>
 
-					<div class="container-estrelas estrelas-03">
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-					</div>
-				</div>
+            <img
+              class="img-comentario"
+              id="img-comentario-01"
+              src="/img/comentario/comentario1.png"
+              alt="Foto do comentario"
+            />
+            <h3 class="nome-avaliacao nome-avaliacao-01">João Henrique</h3>
+            <p class="texto-avaliacao texto-avaliacao-01">
+              Atendimento de primeira, cuidam muito bem dos animais e sempre
+              explicam tudo com clareza.
+            </p>
 
-				<!-- CONTEÚDO SLIDE 2 -->
+            <div class="container-estrelas estrelas-01">
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+            </div>
+            <svg
+              class="imagem-entre-avaliacoes imagem-entre-um"
+              width="900"
+              height="2"
+              viewBox="0 0 900 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="900"
+                height="2"
+                transform="matrix(1 0 0 -1 0 2)"
+                fill="black"
+                fill-opacity="0.1"
+              />
+            </svg>
 
-				<div class="slide-avaliacao">
-					<h2 id="titulo-avaliacao">Avaliações (34)</h2>
-					<p id="indice-avaliacao">2</p>
+            <img
+              class="img-comentario"
+              id="img-comentario-02"
+              src="/img/comentario/comentario2.png"
+              alt="Foto do comentario"
+            />
+            <h3 class="nome-avaliacao nome-avaliacao-02">Adamilton Jr</h3>
+            <p class="texto-avaliacao texto-avaliacao-02">
+              A clínica é muito bem equipada, e os profissionais são incríveis,
+              mas o tempo de espera poderia ser menor.
+            </p>
 
-					<img class="img-comentario" id="img-comentario-01" src="/img/comentario/comentario1.png" alt="Foto do comentario" />
-					<h3 class="nome-avaliacao nome-avaliacao-01">João Henrique</h3>
-					<p class="texto-avaliacao texto-avaliacao-01">
-						Atendimento de primeira, cuidam muito bem dos animais e sempre
-						explicam tudo com clareza.
-					</p>
+            <div class="container-estrelas estrelas-02">
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+            </div>
 
-					<div class="container-estrelas estrelas-01">
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-					</div>
-					<svg class="imagem-entre-avaliacoes imagem-entre-um" width="900" height="2" viewBox="0 0 900 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="900" height="2" transform="matrix(1 0 0 -1 0 2)" fill="black" fill-opacity="0.1" />
-					</svg>
+            <svg
+              class="imagem-entre-avaliacoes imagem-entre-dois"
+              width="900"
+              height="2"
+              viewBox="0 0 900 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="900"
+                height="2"
+                transform="matrix(1 0 0 -1 0 2)"
+                fill="black"
+                fill-opacity="0.1"
+              />
+            </svg>
 
-					<img class="img-comentario" id="img-comentario-02" src="/img/comentario/comentario2.png" alt="Foto do comentario" />
-					<h3 class="nome-avaliacao nome-avaliacao-02">Adamilton Jr</h3>
-					<p class="texto-avaliacao texto-avaliacao-02">
-						A clínica é muito bem equipada, e os profissionais são
-						incríveis, mas o tempo de espera poderia ser menor.
-					</p>
+            <img
+              class="img-comentario"
+              id="img-comentario-03"
+              src="/img/comentario/comentario3.png"
+              alt="Foto do comentario"
+            />
+            <h3 class="nome-avaliacao nome-avaliacao-03">Luciana da Silva</h3>
+            <p class="texto-avaliacao texto-avaliacao-03">
+              Profissionais capacitados e atenciosos, meu gato recebeu o melhor
+              cuidado. Recomendo muito!
+            </p>
 
-					<div class="container-estrelas estrelas-02">
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-					</div>
+            <div class="container-estrelas estrelas-03">
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+            </div>
+          </div>
 
-					<svg class="imagem-entre-avaliacoes imagem-entre-dois" width="900" height="2" viewBox="0 0 900 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="900" height="2" transform="matrix(1 0 0 -1 0 2)" fill="black" fill-opacity="0.1" />
-					</svg>
+          <!-- CONTEÚDO SLIDE 3 -->
 
-					<img class="img-comentario" id="img-comentario-03" src="/img/comentario/comentario3.png" alt="Foto do comentario" />
-					<h3 class="nome-avaliacao nome-avaliacao-03">Luciana da Silva</h3>
-					<p class="texto-avaliacao texto-avaliacao-03">
-						Profissionais capacitados e atenciosos, meu gato recebeu o
-						melhor cuidado. Recomendo muito!
-					</p>
+          <div class="slide-avaliacao">
+            <h2 id="titulo-avaliacao">Avaliações (34)</h2>
+            <p id="indice-avaliacao">3</p>
 
-					<div class="container-estrelas estrelas-03">
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-					</div>
-				</div>
+            <img
+              class="img-comentario"
+              id="img-comentario-01"
+              src="/img/comentario/comentario1.png"
+              alt="Foto do comentario"
+            />
+            <h3 class="nome-avaliacao nome-avaliacao-01">Matheus Brito</h3>
+            <p class="texto-avaliacao texto-avaliacao-01">
+              A equipe é super dedicada e o ambiente é acolhedor, perfeito para
+              quem se importa com o bem-estar do pet.
+            </p>
 
-				<!-- CONTEÚDO SLIDE 3 -->
+            <div class="container-estrelas estrelas-01">
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+            </div>
+            <svg
+              class="imagem-entre-avaliacoes imagem-entre-um"
+              width="900"
+              height="2"
+              viewBox="0 0 900 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="900"
+                height="2"
+                transform="matrix(1 0 0 -1 0 2)"
+                fill="black"
+                fill-opacity="0.1"
+              />
+            </svg>
 
-				<div class="slide-avaliacao">
-					<h2 id="titulo-avaliacao">Avaliações (34)</h2>
-					<p id="indice-avaliacao">3</p>
+            <img
+              class="img-comentario"
+              id="img-comentario-02"
+              src="/img/comentario/comentario2.png"
+              alt="Foto do comentario"
+            />
+            <h3 class="nome-avaliacao nome-avaliacao-02">Luiz Jr</h3>
+            <p class="texto-avaliacao texto-avaliacao-02">
+              Atendimento excelente e muito atencioso! Meu pet recebeu todo o
+              cuidado necessário e ficou ótimo.
+            </p>
 
-					<img class="img-comentario" id="img-comentario-01" src="/img/comentario/comentario1.png" alt="Foto do comentario" />
-					<h3 class="nome-avaliacao nome-avaliacao-01">Matheus Brito</h3>
-					<p class="texto-avaliacao texto-avaliacao-01">
-						A equipe é super dedicada e o ambiente é acolhedor, perfeito
-						para quem se importa com o bem-estar do pet.
-					</p>
+            <div class="container-estrelas estrelas-02">
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+            </div>
 
-					<div class="container-estrelas estrelas-01">
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-					</div>
-					<svg class="imagem-entre-avaliacoes imagem-entre-um" width="900" height="2" viewBox="0 0 900 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="900" height="2" transform="matrix(1 0 0 -1 0 2)" fill="black" fill-opacity="0.1" />
-					</svg>
+            <svg
+              class="imagem-entre-avaliacoes imagem-entre-dois"
+              width="900"
+              height="2"
+              viewBox="0 0 900 2"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <rect
+                width="900"
+                height="2"
+                transform="matrix(1 0 0 -1 0 2)"
+                fill="black"
+                fill-opacity="0.1"
+              />
+            </svg>
 
-					<img class="img-comentario" id="img-comentario-02" src="/img/comentario/comentario2.png" alt="Foto do comentario" />
-					<h3 class="nome-avaliacao nome-avaliacao-02">Luiz Jr</h3>
-					<p class="texto-avaliacao texto-avaliacao-02">
-						Atendimento excelente e muito atencioso! Meu pet recebeu todo o
-						cuidado necessário e ficou ótimo.
-					</p>
+            <img
+              class="img-comentario"
+              id="img-comentario-03"
+              src="/img/comentario/comentario3.png"
+              alt="Foto do comentario"
+            />
+            <h3 class="nome-avaliacao nome-avaliacao-03">Clariane da Silva</h3>
+            <p class="texto-avaliacao texto-avaliacao-03">
+              Fiquei satisfeita com o atendimento, mas achei os preços um pouco
+              altos para alguns serviços.
+            </p>
 
-					<div class="container-estrelas estrelas-02">
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-					</div>
+            <div class="container-estrelas estrelas-03">
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+              <img
+                class="estrela"
+                src="/img/comentario/estrela.png"
+                alt="estrela"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="buttons-avaliacao">
+          <button id="prev">
+            <img
+              id="seta-volta-avaliacao"
+              src="/img/comentario/flecha_back.png"
+              alt="Seta Voltar"
+            />
+          </button>
+          <button id="next">
+            <img
+              id="seta-avancar-avaliacao"
+              src="/img/comentario/flecha_next.png"
+              alt="Seta Avancar"
+            />
+          </button>
+        </div>
+      </section>
 
-					<svg class="imagem-entre-avaliacoes imagem-entre-dois" width="900" height="2" viewBox="0 0 900 2" fill="none" xmlns="http://www.w3.org/2000/svg">
-						<rect width="900" height="2" transform="matrix(1 0 0 -1 0 2)" fill="black" fill-opacity="0.1" />
-					</svg>
+      <section id="contato">
+        <h2 id="titulo-contato">Entre em contato</h2>
 
-					<img class="img-comentario" id="img-comentario-03" src="/img/comentario/comentario3.png" alt="Foto do comentario" />
-					<h3 class="nome-avaliacao nome-avaliacao-03">Clariane da Silva</h3>
-					<p class="texto-avaliacao texto-avaliacao-03">
-						Fiquei satisfeita com o atendimento, mas achei os preços um
-						pouco altos para alguns serviços.
-					</p>
+        <div id="formulario">
+          <div id="info">
+            <h3 id="titulo-info">Localização</h3>
+            <h3 id="endereco-info">
+              Rua - Fulana de tal, 9999<br />CEP 99999-999<br />Pindorama/SP
+            </h3>
+            <img id="mapa-info" src="/img/formulario/mapa.jpg" alt="Mapa" />
 
-					<div class="container-estrelas estrelas-03">
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-						<img class="estrela" src="/img/comentario/estrela.png" alt="estrela" />
-					</div>
-				</div>
-			</div>
-			<div class="buttons-avaliacao">
-				<button id="prev">
-					<img id="seta-volta-avaliacao" src="/img/comentario/flecha_back.png" alt="Seta Voltar" />
-				</button>
-				<button id="next">
-					<img id="seta-avancar-avaliacao" src="/img/comentario/flecha_next.png" alt="Seta Avancar" />
-				</button>
-			</div>
-		</section>
+            <div id="redes-sociais">
+              <img
+                class="imagens-redes-sociais"
+                src="/img/formulario/icon-whatsapp.png"
+                alt="Whatsapp"
+              />
+              <p class="texto-info" id="whatsapp-info">(99)-99999999</p>
 
-		<section id="contato">
-			<h2 id="titulo-contato">Entre em contato</h2>
+              <img src="/img/formulario/icon-instagram.png" alt="Instagram" />
+              <p class="texto-info" id="instagram-info">@PindoramaClinica</p>
 
-			<div id="formulario">
+              <img src="/img/formulario/icon-face.png" alt="Facebook" />
+              <p class="texto-info" id="facebook-info">PindoramaClinica</p>
+            </div>
+          </div>
+          <div id="campos-formulario">
+            <form action="/">
+              <p><label for="nome">Nome</label></p>
+              <input class="input-form" type="text" name="nome" id="nome" />
 
-				<div id="info">
-					<h3 id="titulo-info">Localização</h3>
-					<h3 id="endereco-info">
-						Rua - Fulana de tal, 9999<br />CEP 99999-999<br />Pindorama/SP
-					</h3>
-					<img id="mapa-info" src="/img/formulario/mapa.jpg" alt="Mapa" />
+              <p><label for="/">Sobrenome</label></p>
+              <input
+                class="input-form"
+                type="text"
+                name="sobrenome"
+                id="nome"
+              />
 
-					<div id="redes-sociais">
-						<img class="imagens-redes-sociais" src="/img/formulario/icon-whatsapp.png" alt="Whatsapp" />
-						<p class="texto-info" id="whatsapp-info">(99)-99999999</p>
+              <p><label for="/">Email</label></p>
+              <input
+                class="input-form"
+                type="email"
+                name="email"
+                id="nome"
+                placeholder="usuario@dominio.com"
+              />
 
-						<img src="/img/formulario/icon-instagram.png" alt="Instagram" />
-						<p class="texto-info" id="instagram-info">@PindoramaClinica</p>
+              <p><label for="/">Mensagem</label></p>
+              <textarea
+                class="input-form"
+                name="mensagem"
+                id="mensagem"
+                rows="5"
+                cols="40"
+              ></textarea>
 
-						<img src="/img/formulario/icon-face.png" alt="Facebook" />
-						<p class="texto-info" id="facebook-info">PindoramaClinica</p>
-					</div>
+              <a class="botao btn-formulario" href="/">Enviar</a>
+            </form>
+          </div>
+        </div>
+      </section>
 
-				</div>
-				<div id="campos-formulario">
-
-					<form action="/">
-
-						<p><label for="nome">Nome</label></p>
-						<input class="input-form" type="text" name="nome" id="nome">
-
-						<p><label for="/">Sobrenome</label></p>
-						<input class="input-form" type="text" name="sobrenome" id="nome">
-
-						<p><label for="/">Email</label></p>
-						<input class="input-form" type="email" name="email" id="nome" placeholder="usuario@dominio.com">
-
-						<p><label for="/">Mensagem</label></p>
-						<textarea class="input-form" name="mensagem" id="mensagem" rows="5" cols="40"></textarea>
-
-						<a class="botao btn-formulario" href="/">Enviar</a>
-
-					</form>
-				</div>
-			</div>
-		</section>
-
-		<footer>
-			<div class="container">
-				<div id="footer">
-					<div id="logo">
-						<img id="logo-icon-footer" src="/img/logo/logo-icon.png" alt="Ícone da logo">
-						<img id="logo-name-footer" src="/img/logo/Logo-name.png" alt="Nome da Logo">
-					</div>
-					<div class="texto-footer" id="texto-footer-01">
-						<p class="texto-detalhes bold">NOSSOS SERVIÇOS</p>
-						<p class="texto-detalhes">SOBRE NÓS</p>
-						<p class="texto-detalhes">CONSULTA VETERINARIA</p>
-						<p class="texto-detalhes">NOSSOS SERVIÇOS</p>
-					</div>
-					<div class="texto-footer" id="texto-footer-02">
-						<p class="texto-detalhes bold">INSTITUCIONAL</p>
-						<p class="texto-detalhes">PROGRAMA DE ADOÇÃO</p>
-						<p class="texto-detalhes">TERMOS DE COMPROMISSO</p>
-						<p class="texto-detalhes">UNECT JR</p>
-					</div>
-					<div class="texto-footer" id="texto-footer-03">
-						<p class="texto-detalhes bold">NOSSOS CONTATOS</p>
-						<div id="imagens-footer">
-							<img src="/img/formulario/icon-whatsapp.png" alt="Whatsapp">
-							<img src="/img/formulario/icon-instagram.png" alt="Instagram">
-							<img src="/img/formulario/icon-face.png" alt="Facebook">
-						</div>
-					</div>
-				</div>
-			</div>
-			<div id="frame54">
-				<p class="texto-detalhes bold">PINDORAMA CLINICA VETERINARIA 2024© - Todos os direitos reservados</p>
-			</div>
-		</footer>
-
-	</main>
-	<script src="/js/script.js"></script>
-</body>
-
+      <footer>
+        <div class="container">
+          <div id="footer">
+            <div id="logo">
+              <img
+                id="logo-icon-footer"
+                src="/img/logo/logo-icon.png"
+                alt="Ícone da logo"
+              />
+              <img
+                id="logo-name-footer"
+                src="/img/logo/Logo-name.png"
+                alt="Nome da Logo"
+              />
+            </div>
+            <div class="texto-footer" id="texto-footer-01">
+              <p class="texto-detalhes bold">NOSSOS SERVIÇOS</p>
+              <p class="texto-detalhes">SOBRE NÓS</p>
+              <p class="texto-detalhes">CONSULTA VETERINARIA</p>
+              <p class="texto-detalhes">NOSSOS SERVIÇOS</p>
+            </div>
+            <div class="texto-footer" id="texto-footer-02">
+              <p class="texto-detalhes bold">INSTITUCIONAL</p>
+              <p class="texto-detalhes">PROGRAMA DE ADOÇÃO</p>
+              <p class="texto-detalhes">TERMOS DE COMPROMISSO</p>
+              <p class="texto-detalhes">UNECT JR</p>
+            </div>
+            <div class="texto-footer" id="texto-footer-03">
+              <p class="texto-detalhes bold">NOSSOS CONTATOS</p>
+              <div id="imagens-footer">
+                <img src="/img/formulario/icon-whatsapp.png" alt="Whatsapp" />
+                <img src="/img/formulario/icon-instagram.png" alt="Instagram" />
+                <img src="/img/formulario/icon-face.png" alt="Facebook" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div id="frame54">
+          <p class="texto-detalhes bold">
+            PINDORAMA CLINICA VETERINARIA 2024© - Todos os direitos reservados
+          </p>
+        </div>
+      </footer>
+    </main>
+    <script src="/js/script.js"></script>
+  </body>
 </html>

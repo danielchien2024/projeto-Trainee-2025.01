@@ -1,3 +1,4 @@
+/* Estilos base existentes */
 #bannercentral {
   position: relative;
   display: flex;
@@ -16,6 +17,8 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-rows: auto auto;
+  position: relative; /* Adicionado para ser referência para #animais em telas pequenas */
+  z-index: 1; /* Garante que o conteúdo do container fique acima do fundo elíptico */
 }
 
 #titulo-banner-central {
@@ -24,72 +27,149 @@
   padding-top: 3rem;
   grid-column: 1/4;
   color: #063643;
+  position: relative; /* Para garantir controle de empilhamento se necessário */
+  z-index: 1; /* Nível de empilhamento padrão */
 }
 
 .btn-banner-central {
   grid-row: 2;
-
   border-radius: 0.5rem;
   background: #0f637a;
   color: #f8f8ff;
+  position: relative; /* Para garantir controle de empilhamento se necessário */
+  z-index: 1; /* Nível de empilhamento padrão */
 }
 
 #animais {
-  position: relative;
+  position: relative; /* Necessário para z-index e posicionamento absoluto dos filhos */
   grid-column: 2/4;
   grid-row: 2;
+  z-index: 10; /* <<< Z-INDEX ALTO para ficar sempre na frente */
 }
 
 #animais #animais1 {
   position: absolute;
   bottom: 2.72rem;
   right: 8.31rem;
-  width: 25rem;
-  height: 15.9715rem;
-  flex-shrink: 0;
+  max-width: 25rem;
+  max-height: 15.9715rem;
+  flex: 1;
 }
 
 #animais #animais2 {
   position: absolute;
   bottom: 2.44rem;
   right: 32.31rem;
-  width: 12.5rem;
-  height: 10rem;
-  flex-shrink: 0;
+  max-width: 12.5rem;
+  max-height: 10rem;
+  flex: 1;
 }
 
 #animais #gatocinza {
   position: absolute;
   bottom: 2.69rem;
   right: 0;
-  width: 13.75rem;
-  height: 10.74331rem;
-  flex-shrink: 0;
+  max-width: 13.75rem;
+  max-height: 10.74331rem;
+  flex: 1;
 }
 
 #waveform {
   position: absolute;
   top: 0;
   right: 0;
-  width: 200px;
-  height: 200px;
+  width: 200px; /* Ajustei um pouco, pode voltar para o seu valor */
+  height: 200px; /* Ajustei um pouco, pode voltar para o seu valor */
   flex-shrink: 0;
+  z-index: 5; /* Nível intermediário, abaixo de #animais */
 }
-@media (max-width: 1150px) {
-  #animais #animais2 {
-    display: none;
+
+
+/* === Estilos para telas menores ou iguais a 450px === */
+@media (max-width: 450px) {
+  #bannercentral {
+    height: auto;
+    padding: 1rem; /* Reduzi o padding para dar mais espaço */
+    margin-top: 5rem;
+    border: none;
+    background: none;
+    box-shadow: none;
+    width: 100%;
+    overflow: hidden;
+    position: relative; /* Necessário para o ::before */
   }
-}
-@media (max-width: 950px) {
-  #animais #animais1 {
-    display: none;
+
+  /* Fundo Elipse */
+  #bannercentral::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 305.976px;
+    height: 473.878px;
+    border-radius: 373.878px;
+    background: linear-gradient(196deg, rgba(195, 236, 248, 0.20) 4.89%, rgba(15, 99, 122, 0.20) 97.81%);
+    transform: translate(-50%, -50%) rotate(-104.496deg);
+    z-index: -1;
+    flex-shrink: 0;
   }
-}
-@media (max-width: 600px) {
-  #bannercentral #waveform {
-    display: none;
+
+  #bannercentral .container {
+    /* Resetando o grid e usando block/padding para layout */
+    display: block;
+    grid-template-columns: 1fr;
+    grid-template-rows: auto;
+    width: 90%;
+    margin: 0 auto; /* Centraliza o container */
+    position: relative; /* Já definido na base, mas reforça */
+    padding-top: 120px; /* <<< ESPAÇO NO TOPO para #animais não sobrepor TUDO do título */
+    padding-bottom: 80px; /* <<< ESPAÇO EMBAIXO para o botão */
+    min-height: 350px; /* Altura mínima para conter tudo */
   }
-  #animais #gatocinza {
+
+  /* Título: Topo, Esquerda */
+  #titulo-banner-central {
+    grid-column: auto;
+    grid-row: auto;
+    padding-top: 0;
+    text-align: left;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 1rem;
+    z-index: 1; /* Garante que fique abaixo de #animais */
+  }
+
+  /* Div Animais: Visível, 1rem do topo do container, z-index alto */
+  #animais {
+    display: flex;
+    position: absolute; /* <<< POSICIONAMENTO ABSOLUTO */
+    top: 20rem; /* <<< 1rem DO TOPO DO .container */
+    left: 0; /* Alinha à esquerda do container */
+    right: 0; /* Estica até a direita do container */
+    width: 100%; /* Largura automática (baseada em left/right) */
+    height: auto; /* Altura baseada no conteúdo */
+    min-height: 130px; /* Altura mínima para o gato */
+    grid-column: auto;
+    grid-row: auto;
+    margin-top: 0; /* Reseta margem */
+    z-index: 10; /* <<< Já definido na base, mas reforça a intenção */
+  }
+
+
+  /* Botão: Centralizado abaixo de #animais */
+  /* Vamos posicioná-lo absolutamente também para melhor controle */
+  .btn-banner-central {
+    grid-row: auto; /* Reseta grid */
+    position: absolute; /* <<< POSICIONAMENTO ABSOLUTO */
+    bottom: 1.5rem; /* <<< Distância da base do .container */
+    left: 50%; /* <<< Centraliza */
+    transform: translateX(-50%); /* <<< Centraliza */
+    margin-top: 0; /* Reseta margem superior */
+    z-index: 5; /* Acima do título, mas abaixo de #animais */
+  }
+
+  /* Esconder Waveform */
+  #waveform {
     display: none;
   }
 }

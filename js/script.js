@@ -77,3 +77,65 @@ prevButton.addEventListener("click", () => {
     updateCarousel();
   }
 });
+
+function atualizarTextoQuemSomos() {
+  const paragrafo = document.getElementById('texto-quem-somos');
+
+  // Se o parágrafo não existir na página, não faz nada
+  if (!paragrafo) return;
+
+  const textoOriginal =
+    "Nossa clínica veterinária é comprometida com o cuidado e bem-estar de cada pet, com uma equipe dedicada e instalações modernas, buscamos garantir saúde e conforto em cada atendimento. Cuidamos do seu animalzinho como se fosse nosso!";
+
+  const textoAdaptado =
+    "Nossa clínica veterinária é comprometida com o cuidado e bem-estar de cada pet, com uma equipe dedicada e instalações modernas, buscamos garantir saúde e conforto em cada atendimento.";
+
+  if (window.matchMedia("(max-width: 600px)").matches) {
+    paragrafo.textContent = textoAdaptado;
+  } else {
+    paragrafo.textContent = textoOriginal;
+  }
+}
+
+// Atualiza o conteúdo ao carregar a página
+document.addEventListener("DOMContentLoaded", atualizarTextoQuemSomos);
+
+// Atualiza ao redimensionar a janela
+window.addEventListener("resize", atualizarTextoQuemSomos);
+
+function atualizarTextoProduto() {
+  const titulo = document.getElementById("titulo-produto");
+  const paragrafo = document.getElementById("texto-produto");
+
+  // Se os elementos não existirem na página, não faz nada
+  if (!titulo || !paragrafo) return;
+
+  const tituloOriginal = "Nossos serviços";
+  const tituloAdaptado = "Nossos serviços visam o cuidado do seu pet";
+
+  const textoOriginal =
+    "Na nossa clínica veterinária, cada consulta é realizada com dedicação e atenção aos detalhes, garantindo o melhor cuidado para o seu pet. Contamos com uma equipe experiente e atualizada para oferecer diagnósticos precisos e tratamentos eficazes.";
+
+  const textoAdaptado =
+    "Na nossa clínica veterinária, cada consulta é realizada com dedicação e atenção aos detalhes, garantindo o melhor cuidado para o seu pet.";
+
+  if (window.matchMedia("(max-width: 600px)").matches) {
+    titulo.textContent = tituloAdaptado;
+    paragrafo.textContent = textoAdaptado;
+  } else {
+    titulo.textContent = tituloOriginal;
+    paragrafo.textContent = textoOriginal;
+  }
+}
+
+// Chama as funções ao carregar a página
+document.addEventListener("DOMContentLoaded", () => {
+  atualizarTextoQuemSomos();
+  atualizarTextoProduto();
+});
+
+// Atualiza ao redimensionar a janela
+window.addEventListener("resize", () => {
+  atualizarTextoQuemSomos();
+  atualizarTextoProduto();
+});
