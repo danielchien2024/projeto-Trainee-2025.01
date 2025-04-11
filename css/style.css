@@ -5,9 +5,11 @@
   margin: 0;
   padding: 0;
 }
-section {
-  scroll-margin-top: 150px; /* ajuste esse valor conforme a altura do header */
+section,
+div {
+  scroll-margin-top: 150px;
 }
+
 body {
   font-family: Poppins, Open Sans;
   background: #e2f5fa;
@@ -59,6 +61,9 @@ p {
   font-weight: 700;
 }
 
+.mobile {
+  display: none;
+}
 .container {
   display: flex;
   margin: 0 auto;
@@ -89,5 +94,23 @@ p {
 @media (max-width: 600px) {
   .container {
     width: 90%;
+  }
+}
+@media (max-width: 750px) {
+  p {
+    font-family: Poppins;
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+  }
+}
+
+@media (max-width: 450px) {
+  .mobile {
+    display: block;
+  }
+  p {
+    font-size: 14px;
   }
 }

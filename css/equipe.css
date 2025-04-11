@@ -8,20 +8,23 @@
   border-radius: 0.5rem;
   background: #f8f8ff;
   box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.25);
-  padding: 2.75rem 0;
+  padding-bottom: 2.75rem;
 }
-
+#titulo-equipe {
+  padding-top: 2.75rem;
+  padding-bottom: 1.5rem;
+}
 #titulo-nossos-profissionais {
   color: #063643;
-  margin-bottom: 2.5rem;
   padding-left: 5rem;
 }
 
 #medicos {
   display: grid;
   max-width: 100%;
-  grid-template-columns: repeat(4, 1fr); /* 4 por padrão */
+  grid-template-columns: repeat(4, 1fr);
   height: 100%;
+  padding-top: 1rem;
 }
 
 .medicos-individual {
@@ -47,7 +50,7 @@
   font-family: Inter;
   color: #063643;
 }
-/* Responsivo: 2 médicos por linha em telas menores */
+
 @media (max-width: 968px) {
   #nossos-profissionais {
     width: 80%;
@@ -67,8 +70,26 @@
   }
 }
 @media (max-width: 450px) {
+  #nossos-profissionais {
+    box-shadow: none;
+    margin-bottom: 0;
+  }
   .foto-medico {
     width: 10.375rem;
     height: 10.375rem;
+  }
+  #titulo-equipe {
+    padding-top: 0;
+    display: flex;
+    justify-content: center;
+    background: #e2f5fa;
+  }
+  #titulo-nossos-profissionais {
+    padding: 0;
+  }
+}
+@media (max-width: 350px) {
+  #medicos {
+    overflow: hidden;
   }
 }

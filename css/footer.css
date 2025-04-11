@@ -1,3 +1,7 @@
+#imagens-footer-mobile {
+  display: none;
+}
+
 footer {
   display: flex;
   flex-wrap: wrap;
@@ -11,6 +15,7 @@ footer {
   border-bottom: 0.0625rem solid #c7ebfb;
   background: #f8f8ff;
 }
+
 #footer {
   justify-self: center;
   width: 90%;
@@ -20,6 +25,9 @@ footer {
   align-items: center;
   justify-items: center;
 }
+#footer .container {
+  justify-content: center;
+}
 #footer p {
   display: flex;
   color: #063643;
@@ -28,38 +36,46 @@ footer {
 
 #footer #logo {
   display: flex;
-  flex-direction: column; /* Empilha os elementos verticalmente */
+  flex-direction: column;
   justify-content: center;
-  align-items: center; /* Centraliza os elementos horizontalmente */
+  align-items: center;
   grid-column: 1;
 }
+
 #logo-icon-footer {
   width: 5.16463rem;
   height: 4.76175rem;
   flex-shrink: 0;
 }
+
 #logo-name-footer {
   width: 7.689rem;
   height: 2.27375rem;
   flex-shrink: 0;
 }
+
 .texto-footer {
   display: grid;
   gap: 0.5rem;
 }
+
 #footer #texto-footer-01 {
   grid-column: 2;
 }
+
 #footer #texto-footer-02 {
   grid-column: 3;
 }
+
 #footer #texto-footer-03 {
   grid-column: 4;
 }
+
 #footer #imagens-footer {
   display: flex;
   gap: 1.5rem;
 }
+
 #frame54 {
   width: 100%;
   max-width: 120rem;
@@ -72,7 +88,65 @@ footer {
   background: #063643;
   color: #ffffff;
 }
+
 #frame54 .texto-detalhes {
+  display: flex;
+  align-items: center;
   color: #daedff;
   text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+  footer .container {
+    width: 100%;
+  }
+}
+
+@media (max-width: 728px) {
+  #imagens-footer-mobile {
+    display: flex;
+    justify-content: center;
+    margin: 2.19rem auto 2.17rem auto;
+    gap: 2.2rem;
+  }
+
+  #imagens-footer-mobile img {
+    width: 3.95269rem;
+    height: 3.95269rem;
+    flex-shrink: 0;
+  }
+
+  footer {
+    max-height: 9rem;
+  }
+
+  footer p {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+  }
+
+  #footer {
+    height: 9rem;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #texto-footer-01 {
+    grid-column: 1 !important;
+  }
+
+  #texto-footer-02 {
+    grid-column: 2 !important;
+  }
+
+  #footer #logo,
+  #footer #texto-footer-03 {
+    display: none;
+  }
+}
+
+@media (max-width: 450px) {
+  footer .container #footer p,
+  #frame54 p {
+    font-size: 0.75rem;
+  }
 }

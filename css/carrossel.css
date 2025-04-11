@@ -52,8 +52,7 @@
 .slides {
   display: flex;
   width: 300%;
-  /* Cada slide ocupa 100% dentro disso */
-  transition: transform 0.5s ease-in-out;
+  transition: opacity 0.5s ease-in-out;
 }
 
 .slide {
@@ -140,6 +139,17 @@
   color: #063643;
   top: 9.94rem;
   right: 27.53%;
+  transition: background-color 0.3s ease;
+}
+.btn-slide1:hover {
+  background: #063643;
+  color: #f8f8ff;
+}
+
+.btn-slide2:hover,
+.btn-slide3:hover {
+  background: #7ccbe0;
+  color: #063643;
 }
 /* FORMATAÇÃO DO SLIDE 2 DO CARROSSEL */
 .slide2 {
@@ -163,7 +173,7 @@
   position: absolute;
   left: 4rem;
   top: 5.56rem;
-  width: 519p32.4375rem;
+  max-width: 32.4375rem;
   color: #fafdff;
   font-size: 1.125rem;
   font-style: normal;
@@ -172,12 +182,25 @@
   letter-spacing: 0.0225rem;
 }
 .btn-slide2 {
+  display: flex;
+  width: 17.6875rem;
+  padding: 0.625rem 0.3125rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+
   position: absolute;
   top: 12.94rem;
   left: 5.56rem;
+
   border-radius: 0.25rem;
   background: #f8f8ff;
   color: #063643;
+
+  width: 100%;
+  max-width: 17.6875rem;
+  height: auto;
+  transition: background-color 0.3s ease;
 }
 #cachorrofeliz {
   position: absolute;
@@ -237,6 +260,7 @@
   border-radius: 0.25rem;
   background: #063643;
   color: #f8f8ff;
+  transition: background-color 0.3s ease;
 }
 
 #guarda_chuva {
@@ -306,8 +330,15 @@ body.slide-2 #guarda_chuva {
 }
 
 @media (max-width: 800px) {
-  #ciringa {
+  #ciringa,
+  #textoslide3 {
     display: none;
+  }
+  #tituloslide3 {
+    left: 5.81rem;
+    width: 50%;
+    text-align: start;
+    display: grid;
   }
 }
 
@@ -345,6 +376,11 @@ body.slide-2 #guarda_chuva {
     justify-content: center;
   }
   #textoslide3 {
+    display: none;
+  }
+}
+@media (max-width: 450px) {
+  #carrossel-container {
     display: none;
   }
 }
