@@ -383,6 +383,7 @@
 
   .buttons-mobile button {
     cursor: pointer;
+    background: transparent;
   }
 
   .slide-avaliacao #titulo-avaliacao {
