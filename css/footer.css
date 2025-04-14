@@ -99,6 +99,7 @@ footer {
 @media (max-width: 1024px) {
   footer .container {
     width: 100%;
+    justify-content: center;
   }
 }
 
